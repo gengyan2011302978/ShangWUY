@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/item_parent_check"
+        android:layout_width="38dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_parent_check"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/ic_delete_check_un" />
+    </FrameLayout>
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_audition_item"
+        android:layout_width="105dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="12.5dp"
+        android:layout_marginTop="12.5dp"
+        android:layout_toEndOf="@+id/item_parent_check"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="4dp"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_audition_title_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="12.5dp"
+        android:layout_marginEnd="14dp"
+        android:layout_toEndOf="@+id/iv_audition_item"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        tools:text="普华集团搬家啦" />
+
+    <TextView
+        android:id="@+id/tv_audition_content_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_audition_title_item"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="14dp"
+        android:layout_toEndOf="@+id/iv_audition_item"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        tools:text="莎士比亚”系统集团搬家系统集团系统集团搬" />
+
+    <TextView
+        android:id="@+id/tv_study_people_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_audition_content_item"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/iv_audition_item"
+        android:textColor="@color/color_979797"
+        android:textSize="12sp"
+        tools:text="286人在学" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_has_been_removed"
+        android:layout_width="60dp"
+        android:layout_height="21dp"
+        android:layout_below="@+id/tv_audition_content_item"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="14dp"
+        android:gravity="center"
+        android:text="已下架"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:rv_backgroundColor="@color/color_91387FFF"
+        app:rv_cornerRadius="2dp"
+        tools:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/iv_audition_item"
+        android:layout_marginTop="12.5dp"
+        android:background="@color/color_FAF7F8" />
+
+    <View
+        android:id="@+id/gray_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/iv_audition_item"
+        android:layout_alignBottom="@+id/iv_audition_item"
+        android:background="#66FFFFFF"
+        android:visibility="gone" />
+</RelativeLayout>

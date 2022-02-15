@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.phjt.shangxueyuan.widgets.UserGuideView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/ugv_guide"
+    android:layout_height="wrap_content" />

@@ -1,0 +1,344 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.phjt.upload'
+
+//系统时间
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        applicationId "com.phjt.shangxueyuan"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        flavorDimensions "build"
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a'
+        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BUGLY_APPID", '"4956addc64"'
+        buildConfigField "int", "TENCENT_PLAY_APPID", "1300105446"
+        buildConfigField "String", "PLANET_DOWNLOAD_URL", '"https://test-ecoplanet-web.peogoo.com/downAPP"'
+    }
+
+    productFlavors {
+        //本地
+        local {
+            dimension "build"
+            //后台接口请求域名
+//            buildConfigField "String", "HOST_URL", '"http://10.20.39.99:8080/"'//赵鑫
+            buildConfigField "String", "HOST_URL", '"http://10.20.39.23:8080 "'
+//            buildConfigField "String", "HOST_URL", '"http://10.20.18.39:8080/"' //开发环境
+            //H5公共域名
+            buildConfigField "String", "HOST_URL_H5", '"http://10.20.29.133:8085/"'
+            //停服公告
+            buildConfigField "String", "HOST_URL_NOTICE", '"http://test-k8s-images.oss-cn-beijing.aliyuncs.com/test-shangwuyou/app/swy-prod-common-json.json"'
+            //获取客服信息
+            buildConfigField "String", "HOST_URL_PRODINFO", '"https://shangwuyou-json.sinobalanceol.com/json/swy-prod-service.json"'
+            //友盟账号 测试
+            buildConfigField "String", "UMENG_KEY", '"5e7afdb4895ccaa5b400001c"'
+            buildConfigField "String", "UMENG_SECRET", '"e634d846026702164f7e6cc8711f20cc"'
+            manifestPlaceholders = [
+                    app_name               : "熵吾优_开发",
+                    network_security_config: "@xml/network_security_config_dev"
+            ]
+            //盟主直播 app_id
+            buildConfigField "String", "MZ_APP_ID", '"2021040611235121119"'
+            buildConfigField "String", "MZ_SECRET_KEY", '"q9JdYo4Kdi1iMb8PfprWke60zY44imTKPaYRZWy0m4Jjx1SeeyO2ubo5TjOXR9au"'
+
+        }
+        //测试
+        beta {
+            dimension "build"
+            //后台接口请求域名
+            buildConfigField "String", "HOST_URL", '"https://test-shangwuyou-api.peogoo.com/"'
+            //H5公共域名
+            buildConfigField "String", "HOST_URL_H5", '"https://test-shangwuyou-h5.peogoo.com/"'
+            //停服公告
+            buildConfigField "String", "HOST_URL_NOTICE", '"http://test-k8s-images.oss-cn-beijing.aliyuncs.com/test-shangwuyou/app/swy-prod-common-json.json"'
+            //获取客服信息
+            buildConfigField "String", "HOST_URL_PRODINFO", '"https://shangwuyou-json.sinobalanceol.com/json/swy-prod-service.json"'
+            //友盟账号 测试
+            buildConfigField "String", "UMENG_KEY", '"5e7afdb4895ccaa5b400001c"'
+            buildConfigField "String", "UMENG_SECRET", '"e634d846026702164f7e6cc8711f20cc"'
+            buildConfigField "String", "PLANET_DOWNLOAD_URL", '"https://test-ecoplanet-web.peogoo.com/downAPP"'
+            manifestPlaceholders = [
+                    app_name               : "熵吾优_测试",
+                    network_security_config: "@xml/network_security_config_dev"
+            ]
+            //盟主直播 app_id  secret
+            buildConfigField "String", "MZ_APP_ID", '"2021040611235121119"'
+            buildConfigField "String", "MZ_SECRET_KEY", '"q9JdYo4Kdi1iMb8PfprWke60zY44imTKPaYRZWy0m4Jjx1SeeyO2ubo5TjOXR9au"'
+
+        }
+        //正式
+        product {
+            dimension "build"
+            //后台接口请求域名
+            buildConfigField "String", "HOST_URL", '"https://shangwuyou-api.sinobalanceol.com/"'
+            //H5公共域名
+            buildConfigField "String", "HOST_URL_H5", '"https://shangwuyou-h5.puhuabs.com/"'
+            //停服公告
+            buildConfigField "String", "HOST_URL_NOTICE", '"https://shangwuyou-json.sinobalanceol.com/json/swy-prod-common.json"'
+            //获取客服信息
+            buildConfigField "String", "HOST_URL_PRODINFO", '"https://shangwuyou-json.sinobalanceol.com/json/swy-prod-service.json"'
+            //友盟账号正式
+            buildConfigField "String", "UMENG_KEY", '"5e85a72c167edd050c0001d7"'
+            buildConfigField "String", "UMENG_SECRET", '"e78c166ecf6b65738dd6999886d9f7db"'
+            buildConfigField "String", "PLANET_DOWNLOAD_URL", '"https://ecoplanet-web.peogoo.com/downAPP"'
+            manifestPlaceholders = [
+                    app_name               : "熵吾优",
+                    network_security_config: "@xml/network_security_config"
+            ]
+            //盟主直播 app_id
+            buildConfigField "String", "MZ_APP_ID", '"2021042118481135498"'
+            buildConfigField "String", "MZ_SECRET_KEY", '"jJPjngHe03f2MFyQV1fA5AZD5KwAvbOLqRyWSXJTBe00XyeKNP9QmzoVNl2QNGK6"'
+
+        }
+    }
+
+    //签名文件
+    signingConfigs {
+        release {
+            keyAlias ALIAS_NAME
+            keyPassword KEY_PASS
+            storeFile file(KEY_PATH)
+            storePassword ALIAS_PASS
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            //bugly是否是debug模式
+            buildConfigField "boolean", "IS_DEBUG", "true"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            //bugly是否是debug模式
+            buildConfigField "boolean", "IS_DEBUG", "false"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //打包命名规则
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+//            variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath +
+//                    "/apk/" + productFlavors[0].name + "/" + variant.buildType.name)
+            outputFileName = "ShangWuYou_v${variant.versionName}_${releaseTime()}_${productFlavors[0].name}_1.apk"
+        }
+    }
+
+    greendao {
+        //指定数据库schema版本号，迁移等操作会用到
+        schemaVersion 2
+        //DaoSession、DaoMaster以及所有实体类的dao生成的目录,默认为你的entity所在的包名
+        //daoPackage 包名
+        daoPackage 'com.phjt.shangxueyuan.greendao.gen'
+        //这就是我们上面说到的自定义生成数据库文件的目录了，可以将生成的文件放到我们的java目录中，而不是build中，这样就不用额外的设置资源目录了
+        //工程路径
+        targetGenDir 'src/main/java'
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //移除lint检查的error
+    lintOptions {
+        //true--所有正式版构建执行规则生成崩溃的lint检查，如果有崩溃问题将停止构建
+        checkReleaseBuilds false
+        //lint 错误发生后停止gradle构建
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+        disable 'InvalidPackage'
+        disable "ResourceType"
+    }
+    packagingOptions {
+        exclude 'META-INF/beans.xml'
+    }
+}
+
+uploadApk {
+    pgy {
+        apiKey '6ea8f82b692094f3aa467462f0cfa9f9' //蒲公英平台的 API Key  必填
+    }
+    qywx {
+        appName '熵吾优'  //APP名称 必填
+        webhook 'https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=c4107d4c-5d25-4d67-9375-3d0bee9087c3'
+        //webhook地址 必填
+        content '修改禅道bug'   //更新文案 选填
+        isAll false  //是否@所有人 选填
+        notice = ['13810345009', '15733100978']  //@具体人 填手机号 任宪怀：13810345009 张月婷：15733100978
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    testImplementation rootProject.ext.dependencies["junit"]
+    androidTestImplementation rootProject.ext.dependencies["runner"]
+    androidTestImplementation rootProject.ext.dependencies["espresso-core"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["autosize"]
+    implementation rootProject.ext.dependencies["rxpermissions2"]
+    implementation rootProject.ext.dependencies["SmartRefresh"]
+    implementation rootProject.ext.dependencies["immersionbar"]
+    implementation rootProject.ext.dependencies["pickerview"]
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+    //okHttp 进度监听
+    implementation rootProject.ext.dependencies["progressmanager"]
+    //加载框
+    implementation rootProject.ext.dependencies["avloadingindicatorview"]
+    implementation rootProject.ext.dependencies["gson"]
+
+    //自建maven仓库，替代module   如需修改module，同步修改setting.gradle里module依赖
+    implementation project(':base_module')
+//    implementation('com.phjt.base:base-module:1.0.0') {
+//        exclude module: 'gson'
+//    }
+    implementation project(':imageloader_glide')
+//    implementation 'com.phjt.base:image-loader:1.0.0'
+    implementation project(':FlycoTabLayout_Lib')
+//    implementation 'com.phjt.shangwuyou:flycotablayout:1.0.0'
+    implementation project(':banner')
+//    implementation 'com.phjt.shangwuyou:banner:1.0.0'
+    implementation project(':calendarview')
+//    implementation 'com.phjt.shangwuyou:calendarview:1.0.0'
+    implementation project(':expandabletextviewlibrary')
+//    implementation 'com.phjt.shangwuyou:expandtextview:1.0.0'
+    implementation project(':MZMediaSDK')
+    //implementation 'com.phjt.shangwuyou:mz-media-sdk:1.0.0'
+
+    //libsuperplayer 无法下载远程aar(原因未知！！！)，放入本地lib库
+    //implementation project(':libsuperplayer')
+    implementation(name: 'libsuperplayer-1.0.0', ext: 'aar')
+    // 超级播放器 SDK 和 弹幕
+    implementation(name: 'LiteAVSDK_Player', ext: 'aar')
+    implementation 'com.github.ctiao:DanmakuFlameMaster:0.5.3'
+
+    //普华view库
+    implementation 'com.phjt.view:view:1.1.0'
+    //普华工具类
+    implementation 'com.github.marven88cn:phsxy_library:1.0.4'
+    //支付
+    implementation('com.phjt.pay:pay:1.0.1') {
+        exclude group: 'com.tencent.mm.opensdk'
+    }
+    //友盟分享
+    implementation 'com.phjt.share:share:1.1.9'
+    //友盟推送
+    implementation rootProject.ext.dependencies["umeng-push"]
+    implementation rootProject.ext.dependencies["umeng-alicloud-httpdns"]
+    implementation rootProject.ext.dependencies["umeng-alicloud-utils"]
+    implementation rootProject.ext.dependencies["umeng-alicloud_beacon"]
+    implementation rootProject.ext.dependencies["umeng-agoo-accs"]
+    implementation rootProject.ext.dependencies["umeng-agoo_aranger"]
+    implementation rootProject.ext.dependencies["umeng-agoo_networksdk"]
+    implementation rootProject.ext.dependencies["umeng-agoo_tnet4android"]
+
+    //WebView库
+    implementation 'com.github.Justson.AgentWeb:agentweb-core:v4.1.9-androidx'
+    //图片选择
+    implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc05'
+    //微信SDK接入
+    //implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.4.0'
+    //二维码
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+    //Bugly SDK
+    implementation 'com.tencent.bugly:crashreport:3.1.0'
+    implementation 'com.tencent.bugly:nativecrashreport:3.7.1'
+    //富文本加载
+    implementation('com.zzhoujay.richtext:richtext:2.5.1') {
+        exclude group: 'com.android.support'
+    }
+
+    implementation 'org.aspectj:aspectjrt:1.8.9'
+
+    implementation 'com.liulishuo.okdownload:okdownload:1.0.7'
+    implementation 'org.greenrobot:greendao:3.3.0'
+    implementation 'org.greenrobot:greendao-generator:3.3.0'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+
+    implementation rootProject.ext.dependencies["easy_float"]
+
+//    implementation 'com.bytedance.applog:RangersAppLog-Lite-cn:3.3.12'
+//    compileOnly 'org.projectlombok:lombok:1.18.16'
+//    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+//
+//    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+//    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+}
+
+import org.aspectj.bridge.IMessage
+import org.aspectj.bridge.MessageHandler
+import org.aspectj.tools.ajc.Main
+
+//标注1
+final def log = project.logger
+final def variants = project.android.applicationVariants
+
+variants.all { variant ->
+//    //标注2
+//    if (!variant.buildType.isDebuggable()) {
+//        log.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
+//        return;
+//    }
+    //标注3
+    JavaCompile javaCompile = variant.javaCompile
+    javaCompile.doLast {
+        String[] args = ["-showWeaveInfo",
+                         "-1.8",
+                         "-inpath", javaCompile.destinationDir.toString(),
+                         "-aspectpath", javaCompile.classpath.asPath,
+                         "-d", javaCompile.destinationDir.toString(),
+                         "-classpath", javaCompile.classpath.asPath,
+                         "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
+        log.debug "ajc args: " + Arrays.toString(args)
+
+        MessageHandler handler = new MessageHandler(true);
+        new Main().run(args, handler);
+        //标注4
+        for (IMessage message : handler.getMessages(null, true)) {
+            switch (message.getKind()) {
+                case IMessage.ABORT:
+                case IMessage.ERROR:
+                case IMessage.FAIL:
+                    log.error message.message, message.thrown
+                    break;
+                case IMessage.WARNING:
+                    log.warn message.message, message.thrown
+                    break;
+                case IMessage.INFO:
+                    log.info message.message, message.thrown
+                    break;
+                case IMessage.DEBUG:
+                    log.debug message.message, message.thrown
+                    break;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF000000" />
+
+    <TextView
+        android:id="@+id/tv_live_tip_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="126dp"
+        android:gravity="center"
+        android:text="该直播为付费直播\n支付完成即可进入观看"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_live_pay"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="支付1学豆"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_live_tip_content"
+        app:rv_backgroundColor="@color/color_F9D213"
+        app:rv_cornerRadius="22dp"
+        app:rv_strokeColor="@color/colorFFFFFF" />
+
+    <TextView
+        android:id="@+id/tv_start_time_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/color_FEBC50"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_live_pay"
+        tools:text="该直播已开播xx分钟"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_live_qr"
+        android:layout_width="141dp"
+        android:layout_height="141dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_about"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_start_time_tip" />
+
+    <TextView
+        android:id="@+id/tv_live_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="长按保存二维码，微信扫一扫添加客服微信"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_live_qr"
+        app:layout_constraintStart_toStartOf="@+id/iv_live_qr"
+        app:layout_constraintTop_toBottomOf="@+id/iv_live_qr" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_live_back"
+        android:layout_width="130dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="返回上一页"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_live_qr"
+        app:rv_backgroundColor="@color/color_80DADADA"
+        app:rv_cornerRadius="20dp"
+        app:rv_strokeColor="@color/colorFFFFFF"
+        app:rv_strokeWidth="0.5dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

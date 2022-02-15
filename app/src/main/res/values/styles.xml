@@ -1,0 +1,194 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/color_white</item>
+    </style>
+
+    <style name="NoTitle" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="UnderLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/colorD8D8D8</item>
+    </style>
+
+    <style name="UnderLine_0_35" parent="UnderLine">
+        <item name="android:layout_marginStart">35dp</item>
+        <item name="android:layout_marginEnd">35dp</item>
+    </style>
+
+    <style name="UnderLine_9_35" parent="UnderLine_0_35">
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:layout_marginBottom">9dp</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginEnd">35dp</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColorHint">@color/color999999</item>
+        <item name="android:textColor">@color/color666666</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="EditText_Base" parent="EditText">
+        <item name="android:layout_marginEnd">0dp</item>
+    </style>
+
+    <style name="TipsText">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color666666</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 公用普通Dialog样式-->
+    <style name="custom_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <!--<item name="android:windowAnimationStyle">@style/PopupWindowAnimation</item>-->
+        <!-- Dialog进入及退出动画 -->
+
+        <!--        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>-->
+    </style>
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+    <!-- popwindow -->
+    <style name="PopupWindowAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+    </style>
+
+    <style name="BaseDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Plane_Dialog">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="SpiderManTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/light_colorPrimaryDark</item>
+        <item name="smToolbar">@color/light_smToolbar</item>
+        <item name="smToolbarText">@color/light_smToolbarText</item>
+        <item name="smToolbarShareText">@color/light_smToolbarShareText</item>
+        <item name="smContentBackground">@color/light_smContentBackground</item>
+        <item name="smIdentText">@color/light_smIdentText</item>
+        <item name="smDescText">@color/light_smDescText</item>
+    </style>
+
+    <style name="line_EFEFEF">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:background">@color/color_EFEFEF</item>
+    </style>
+
+    <style name="line_bank_card">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_marginStart">15dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+        <item name="android:layout_marginTop">15.5dp</item>
+        <item name="android:background">@color/color_EFEFEF</item>
+    </style>
+
+    <style name="bank_card_fill_in_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/color_333333</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+
+    <style name="bank_card_fill_in_right">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:textColorHint">@color/color_C4C4C4</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">end</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:paddingEnd">15dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="withdrawal_detail_right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/color_666666</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">15dp</item>
+    </style>
+
+    <!-- 盟主直播 -->
+    <style name="AppCompatTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowBackground">@color/white</item>-->
+    </style>
+
+    <declare-styleable name="SortSelectView">
+        <attr name="timeUpClickId" format="integer" />
+        <attr name="timeDownClickId" format="integer" />
+        <attr name="likeUpClickId" format="integer" />
+        <attr name="likeDownClickId" format="integer" />
+        <attr name="timeName" format="reference|string" />
+        <attr name="likeName" format="reference|string" />
+        <attr name="timeStyle">
+            <enum name="NULL" value="0" />
+            <enum name="UP" value="1" />
+            <enum name="DOWN" value="2" />
+        </attr>
+        <attr name="likeStyle">
+            <enum name="NULL" value="0" />
+            <enum name="UP" value="1" />
+            <enum name="DOWN" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

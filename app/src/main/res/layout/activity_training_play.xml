@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.tencent.liteav.demo.play.SuperPlayerView
+        android:id="@+id/spv_video"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@color/color_333333"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_course_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spv_video" />
+
+    <ImageView
+        android:id="@+id/iv_play"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="@+id/spv_video"
+        app:layout_constraintEnd_toEndOf="@+id/spv_video"
+        app:layout_constraintStart_toStartOf="@+id/spv_video"
+        app:layout_constraintTop_toTopOf="@+id/spv_video" />
+
+    <TextView
+        android:id="@+id/tv_training_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="2dp"
+        android:maxLines="2"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/spv_video"
+        tools:text="翟山鹰老师讲述中国特色金融体系" />
+
+    <TextView
+        android:id="@+id/tv_training_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.5dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_training_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_training_title"
+        tools:text="更新时间：2021-1-4" />
+
+    <TextView
+        android:id="@+id/tv_training_study_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_training_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_training_time"
+        tools:text="学习次数：0次" />
+
+    <View
+        android:id="@+id/training_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_F8F8F8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_training_time" />
+
+    <TextView
+        android:id="@+id/tv_training_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/comment"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/training_line" />
+
+    <TextView
+        android:id="@+id/tv_training_comment_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_training_comment"
+        app:layout_constraintStart_toEndOf="@+id/tv_training_comment"
+        app:layout_constraintTop_toTopOf="@+id/tv_training_comment"
+        tools:text="（999+）" />
+
+    <TextView
+        android:id="@+id/tv_write_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:drawableEnd="@drawable/comment_write"
+        android:drawablePadding="4dp"
+        android:gravity="center_vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:text="@string/write_comment"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_training_comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_training_comment" />
+
+    <TextView
+        android:id="@+id/tv_training_catalog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_2675FE"
+        android:gravity="center"
+        android:text="@string/training_camp_catalog"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_training_comment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_training_catalog"
+        app:layout_constraintTop_toBottomOf="@+id/tv_training_comment" />
+</androidx.constraintlayout.widget.ConstraintLayout>

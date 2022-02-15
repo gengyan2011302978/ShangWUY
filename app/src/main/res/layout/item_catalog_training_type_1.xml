@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_catalog_1"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp">
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_catalog_1_type_item"
+        android:layout_width="39dp"
+        android:layout_height="17dp"
+        android:gravity="center"
+        android:textColor="@color/color_DE8E40"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rv_backgroundColor="@color/color_FFECD6"
+        app:rv_cornerRadius="2dp"
+        tools:text="视频" />
+
+    <TextView
+        android:id="@+id/tv_catalog_1_name_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/barrier_catalog_1"
+        app:layout_constraintStart_toEndOf="@+id/tv_catalog_1_type_item"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="可打开深刻的今飞凯达交付时代时代峰可打开" />
+
+    <TextView
+        android:id="@+id/tv_catalog_1_state_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="试看"
+        android:textColor="@color/color_2673FE"
+        android:textSize="13sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_catalog_1_lock_item"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/ic_lock"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_catalog_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="tv_catalog_1_state_item,iv_catalog_1_lock_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

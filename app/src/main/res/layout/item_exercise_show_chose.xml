@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title_content_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:lineSpacingExtra="2dp"
+            android:text="1. （单选题）以下关于商业模式说法正确的是？"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_option_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_content_item" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_expand"
+                android:layout_width="15dp"
+                android:layout_height="11dp"
+                android:background="@drawable/icon_expand" />
+
+            <TextView
+                android:id="@+id/tv_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="展开"
+                android:textColor="@color/color_387BFE"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constr_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_exercise_course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="12dp"
+                android:text="相关课程：2019独家揭秘数字经济红利"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/iv_course_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_course_arrow"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="12.5dp"
+                android:src="@drawable/ic_right_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_exercise_course" />
+
+            <View
+                android:id="@+id/line_1"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_F8F8F8"
+                app:layout_constraintTop_toBottomOf="@+id/iv_course_arrow" />
+
+            <TextView
+                android:id="@+id/tv_exercise_last"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="&lt;&lt;上一篇作业"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+            <TextView
+                android:id="@+id/tv_exercise_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="下一篇作业&gt;&gt;"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_exercise_last"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_exercise_last" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_exercise_last" />
+
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group_exercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tv_exercise_course,iv_course_arrow,tv_exercise_last,tv_exercise_next" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

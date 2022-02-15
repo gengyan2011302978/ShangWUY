@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_number_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_FFE36460"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="NO.1" />
+
+
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_head"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="14.5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_number_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true"
+        app:src="@drawable/iv_mine_avatar"
+        app:srcCompat="@drawable/iv_mine_avatar" />
+
+    <TextView
+        android:id="@+id/tv_nickName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ellipsize="end"
+        android:maxEms="6"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/color_FF666666"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_groupName_item"
+        app:layout_constraintStart_toEndOf="@+id/iv_head"
+        app:layout_constraintEnd_toStartOf="@+id/credit_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="啦啦啦啦啦啦啦啦啦啦" />
+
+    <TextView
+        android:id="@+id/tv_groupName_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_FF999999"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_nickName"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nickName"
+        tools:text="A群名称" />
+
+    <ImageView
+        android:id="@+id/iv_level_item"
+        android:layout_width="31.4dp"
+        android:layout_height="14.4dp"
+        android:layout_marginStart="10dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="22.5dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_nickName"
+        tools:src="@drawable/icon_level_one" />
+
+    <TextView
+        android:id="@+id/tv_credit_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="34dp"
+        android:gravity="center"
+        android:textColor="@color/color_FF666666"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_head"
+        tools:text="1000" />
+
+    <TextView
+        android:id="@+id/credit_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOCC："
+        android:layout_marginTop="2.5dp"
+        android:textColor="@color/color_999999"
+        android:textSize="13sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/tv_credit_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_credit_item" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="14dp"
+        android:background="@color/color_FFEEEEEE"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

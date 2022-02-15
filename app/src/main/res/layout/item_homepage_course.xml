@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="165dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="122dp">
+
+        <com.phjt.view.roundImg.RoundedImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/passageway_icon"
+            app:riv_corner_radius="4dp" />
+
+        <TextView
+            android:id="@+id/tv_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="6dp"
+            android:paddingRight="4dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:background="@drawable/bg_1e1e1e_rectangle"
+            android:text="BOC商科"
+            android:textColor="#ffffffff"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:text="基金从业必1231312312312312312321111111113123213考训练营"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="3天掌握10大考点考试…"
+        android:textColor="#ff999999"
+        android:textSize="13sp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="王铭老师"
+            android:textColor="#ff999999"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="1dp"
+            android:drawableLeft="@drawable/ic_eye_look"
+            android:drawablePadding="2.5dp"
+            android:text="263人在学"
+            android:textColor="#ffa8a8a8"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_course_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginRight="11dp"
+            android:background="@drawable/bg_f7f7f7_rectangle"
+            android:gravity="center"
+            android:text="精品试听"
+            android:textColor="#FF854306"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_course_typet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_f7f7f7_rectangle"
+            android:gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="精品试听"
+            android:textColor="@color/color666666"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

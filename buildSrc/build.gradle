@@ -1,0 +1,38 @@
+apply plugin: 'java-library'
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation gradleApi()  //gradle sdk 必须
+    implementation localGroovy()//groovy sdk 必须
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+    implementation 'com.google.code.gson:gson:2.8.7'
+}
+
+uploadArchives {
+
+    repositories {
+        mavenDeployer {
+            repository(url: 'http://10.20.39.35:8081/repository/maven-releases/') {
+                authentication(userName: 'admin', password: 'gy`123456')
+            }
+            pom.project {
+                version '1.0.0' //版本名称
+                artifactId 'uploadplugin'
+                groupId 'com.phjt.plugin'
+                packaging 'jar'
+                description 'update version 1.0.0 add new method' //更新描述
+            }
+        }
+    }
+}

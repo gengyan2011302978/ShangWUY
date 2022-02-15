@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_re_head_pic"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        app:srcCompat="@drawable/iv_mine_avatar" />
+
+    <TextView
+        android:id="@+id/tv_mine_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@+id/iv_re_head_pic"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="190****1013" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:drawablePadding="@dimen/dp_10"
+        android:singleLine="true"
+        android:textColor="@color/color_999999"
+        android:textSize="14sp"
+        android:visibility="visible"
+        tools:text="2020.99.99" />
+
+    <com.phjt.shangxueyuan.utils.FolderTextView
+        android:id="@+id/tv_notes_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginStart="@dimen/dp_17"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:unFoldText="展开"
+        tools:text="听了翟老师的课程才恍然大悟是的发生的发是的发生的发大法师打发点的发送..." />
+
+    <TextView
+        android:id="@+id/tv_notes_con"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_notes_content"
+
+        android:layout_marginStart="@dimen/dp_17"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:text="听了翟老师的课程才恍然大悟是的发生的发是的发" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcy_released"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_notes_con"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:spanCount="3" />
+
+
+    <TextView
+        android:id="@+id/tv_notes_address"
+        android:layout_width="225dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/rcy_released"
+        android:layout_marginStart="@dimen/dp_12"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/dp_148"
+        android:background="@color/color_FFF7F7F7"
+        android:drawableStart="@drawable/ic_clock"
+        android:drawableEnd="@drawable/ic_still_more"
+        android:drawablePadding="@dimen/dp_5"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="@dimen/dp_8"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        tools:text="于 这就是金融的秘密大幅度顺丰到付德...." />
+
+    <include
+        android:id="@+id/zan_comment_layout"
+        layout="@layout/zan_comment_share_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_notes_address"
+        android:layout_marginTop="14dp" />
+
+    <View
+        android:id="@+id/viwe_p"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/zan_comment_layout"
+        android:background="@color/color_F8F8F8" />
+
+    <TextView
+        android:id="@+id/tv_all_replies_es"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viwe_p"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="15dp"
+        android:text="所有回复"
+        android:textColor="@color/color_666666"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_all_replies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viwe_p"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="18.5dp"
+        android:layout_toEndOf="@+id/tv_all_replies_es"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        tools:text="(999+)" />
+</RelativeLayout>

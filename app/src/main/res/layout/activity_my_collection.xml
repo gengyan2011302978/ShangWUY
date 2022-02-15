@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title_common" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/stl_my_collection"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:layout_below="@+id/layout_title"
+        app:tl_indicator_color="@color/color_FF4071FC"
+        app:tl_indicator_corner_radius="1dp"
+        app:tl_indicator_height="3dp"
+        app:tl_indicator_width="24dp"
+        app:tl_tab_space_equal="true"
+        app:tl_textBold="SELECT"
+        app:tl_textSelectColor="@color/color_FF333333"
+        app:tl_textSelectsize="16sp"
+        app:tl_textUnselectColor="@color/color_FF333333"
+        app:tl_textsize="16sp"
+      />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_my_collection"
+        android:layout_below="@+id/stl_my_collection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tv_delete" />
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="22.5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="22.5dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/shape_bg_register"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

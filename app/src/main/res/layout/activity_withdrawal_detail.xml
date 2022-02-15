@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/withdrawal_detail_title"
+        layout="@layout/layout_title_common" />
+
+    <TextView
+        android:id="@+id/amount"
+        style="@style/bank_card_fill_in_left"
+        android:text="提现金额"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/withdrawal_detail_title" />
+
+    <TextView
+        android:id="@+id/tv_amount"
+        style="@style/withdrawal_detail_right"
+        app:layout_constraintBottom_toBottomOf="@+id/amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/amount"
+        tools:text="¥258.25" />
+
+    <View
+        android:id="@+id/line1"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/bank_card_fill_in_left"
+        android:text="提现时间"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        style="@style/withdrawal_detail_right"
+        app:layout_constraintBottom_toBottomOf="@+id/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/date"
+        tools:text="2020-12-12" />
+
+    <View
+        android:id="@+id/line2"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+    <TextView
+        android:id="@+id/state"
+        style="@style/bank_card_fill_in_left"
+        android:text="提现状态"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <TextView
+        android:id="@+id/tv_state"
+        style="@style/withdrawal_detail_right"
+        app:layout_constraintBottom_toBottomOf="@+id/state"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/state"
+        tools:text="已提现" />
+
+    <View
+        android:id="@+id/line3"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/state" />
+
+    <TextView
+        android:id="@+id/bank"
+        style="@style/bank_card_fill_in_left"
+        android:text="提现银行"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+    <TextView
+        android:id="@+id/tv_bank"
+        style="@style/withdrawal_detail_right"
+        app:layout_constraintBottom_toBottomOf="@+id/bank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bank"
+        tools:text="中国银行" />
+
+    <View
+        android:id="@+id/line4"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bank" />
+
+    <TextView
+        android:id="@+id/card_num"
+        style="@style/bank_card_fill_in_left"
+        android:text="银行卡号"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+    <TextView
+        android:id="@+id/tv_card_num"
+        style="@style/withdrawal_detail_right"
+        app:layout_constraintBottom_toBottomOf="@+id/card_num"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/card_num"
+        tools:text="65652325685465535" />
+
+    <View
+        android:id="@+id/line5"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_num" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/bank_card_fill_in_left"
+        android:text="持卡人姓名"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line5" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/withdrawal_detail_right"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/name"
+        tools:text="马云" />
+
+    <View
+        android:id="@+id/line6"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_common" />
+    <com.phjt.shangxueyuan.widgets.FixedViewPager
+        android:id="@+id/pager"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_40"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:background="@color/color_333333"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40">
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/tv_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="1/3"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

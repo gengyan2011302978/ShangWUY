@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_topic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:riv_corner_radius="6dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_topic_bg" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/topic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#数字经济集训数字经济集训营数字经济集训营营"
+            android:maxEms="8"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#ff333333"
+            android:textStyle="bold"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/topic_numb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="939人围观"
+            android:textColor="#ff999999"
+            android:textSize="12sp" />
+    </LinearLayout>
+</LinearLayout>

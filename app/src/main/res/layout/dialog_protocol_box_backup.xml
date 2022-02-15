@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_white_bg">
+
+    <TextView
+        android:id="@+id/tv_box_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_30"
+        android:textColor="@color/color_333333"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        tools:text="温馨提示" />
+
+    <TextView
+        android:id="@+id/tv_welcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_box_title"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="欢迎来到熵吾优！" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_welcoming"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/color_333333"
+        android:textSize="13sp"
+        tools:text="1.为更好的提供浏览推荐、发布信息、购买服务、交流沟通、注册认证" />
+
+    <TextView
+        android:id="@+id/tv_agreement_lift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_27"
+        android:text="您可以阅读完整版"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginStart="@dimen/dp_17"
+        android:layout_marginTop="@dimen/dp_27"
+        android:text="@string/boc_agreement"
+        android:textColor="@color/color_4171FC"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginTop="@dimen/dp_27"
+        android:layout_toEndOf="@+id/tv_agreement"
+        android:text="和"
+        android:textColor="@color/color666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginTop="@dimen/dp_27"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_toEndOf="@+id/tv_term"
+        android:text="@string/terms_and_privacy"
+        android:textColor="@color/color_4171FC"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_agreement"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_cancel"
+            android:gravity="center"
+            android:text="不同意"
+            android:textColor="@color/color999999"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btn_sure"
+            android:gravity="center"
+            android:text="同意"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

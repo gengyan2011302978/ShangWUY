@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="284dp"
+    android:background="@color/color_F5F5F5">
+
+    <ImageView
+        android:id="@+id/iv_collection"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/selector_course_collection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_collection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="收藏"
+        android:textColor="@drawable/selector_course_collection_color"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_collection"
+        app:layout_constraintStart_toStartOf="@+id/iv_collection"
+        app:layout_constraintTop_toBottomOf="@+id/iv_collection" />
+
+    <ImageView
+        android:id="@+id/iv_multiple"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="50dp"
+        android:src="@drawable/course_multiple"
+        app:layout_constraintStart_toEndOf="@+id/iv_collection"
+        app:layout_constraintTop_toTopOf="@+id/iv_collection" />
+
+    <TextView
+        android:id="@+id/tv_multiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="倍速"
+        android:textColor="@color/color_888888"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_multiple"
+        app:layout_constraintStart_toStartOf="@+id/iv_multiple"
+        app:layout_constraintTop_toBottomOf="@+id/iv_multiple" />
+
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="50dp"
+        android:src="@drawable/course_download"
+        app:layout_constraintStart_toEndOf="@+id/iv_multiple"
+        app:layout_constraintTop_toTopOf="@+id/iv_multiple" />
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="下载"
+        android:textColor="@color/color_888888"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_download"
+        app:layout_constraintStart_toStartOf="@+id/iv_download"
+        app:layout_constraintTop_toBottomOf="@+id/iv_download" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_E8E8E8"
+        app:layout_constraintTop_toBottomOf="@+id/tv_download" />
+
+    <ImageView
+        android:id="@+id/iv_wechat"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/course_wechat"
+        app:layout_constraintStart_toStartOf="@+id/iv_collection"
+        app:layout_constraintTop_toBottomOf="@+id/line_view" />
+
+    <TextView
+        android:id="@+id/tv_wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="微信好友"
+        android:textColor="@color/color_888888"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_wechat"
+        app:layout_constraintStart_toStartOf="@+id/iv_wechat"
+        app:layout_constraintTop_toBottomOf="@+id/iv_wechat" />
+
+    <ImageView
+        android:id="@+id/iv_wechat_circle"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="55dp"
+        android:src="@drawable/course_wechat_circle"
+        app:layout_constraintStart_toEndOf="@+id/iv_wechat"
+        app:layout_constraintTop_toTopOf="@+id/iv_wechat" />
+
+    <TextView
+        android:id="@+id/tv_wechat_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="朋友圈"
+        android:textColor="@color/color_888888"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_wechat_circle"
+        app:layout_constraintStart_toStartOf="@+id/iv_wechat_circle"
+        app:layout_constraintTop_toBottomOf="@+id/iv_wechat_circle" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_333333"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

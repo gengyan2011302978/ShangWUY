@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relat_item"
+    android:layout_width="match_parent"
+    android:layout_height="77dp"
+    android:layout_marginLeft="15.5dp"
+    android:layout_marginTop="20dp">
+
+    <CheckBox
+        android:id="@+id/cb_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:button="@drawable/checkbox_selector"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/relat_icon"
+        android:layout_width="105dp"
+        android:layout_height="77dp"
+        android:layout_toRightOf="@+id/cb_click"
+        android:scaleType="fitXY">
+
+        <com.phjt.view.roundImg.RoundedImageView
+            android:id="@+id/ri_icon"
+            android:layout_width="105dp"
+            android:layout_height="77dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="4dp"
+            tools:src="@mipmap/ic_launcher"></com.phjt.view.roundImg.RoundedImageView>
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_000000_rectangle"
+            android:gravity="end"
+            android:paddingRight="3dp"
+            android:text="4个视频"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/relat_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="基金从业金从业基金从业金从业基金从业金从业基金从业金从业基金从业金从业基金从业金从业 必考点训练…"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/relat_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="莎士比亚”系统集团搬家系统集团系统集团搬家系统集团系统集团搬家系统集团…"
+        android:textColor="#ff666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/relat_icon"
+        android:text="5.6G"
+        android:textColor="#ff979797"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_downloading"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:text="正在下载：0"
+        android:textColor="#ff979797"
+        android:textSize="14sp" />
+</RelativeLayout>

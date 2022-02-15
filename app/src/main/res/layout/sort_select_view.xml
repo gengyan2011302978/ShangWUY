@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:textColor="@color/color_FF666666"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="时间" />
+
+    <ImageView
+        android:id="@+id/iv_time"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:paddingEnd="@dimen/dimen_5"
+        android:paddingBottom="@dimen/dimen_5"
+        android:paddingTop="@dimen/dimen_5"
+        android:paddingStart="@dimen/dimen_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_time"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/triangle_select_default" />
+
+    <TextView
+        android:id="@+id/tv_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="4dp"
+        android:textColor="@color/color_FF666666"
+        android:textSize="13sp"
+        android:layout_marginLeft="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_time"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="点赞" />
+
+    <ImageView
+        android:id="@+id/iv_like"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:paddingEnd="@dimen/dimen_5"
+        android:paddingBottom="@dimen/dimen_5"
+        android:paddingTop="@dimen/dimen_5"
+        android:paddingStart="@dimen/dimen_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_like"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/triangle_select_default" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_content_item"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="7dp"
+        android:gravity="center"
+        android:text="企业管理"
+        android:textColor="@color/color_999999"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rv_backgroundColor="@color/white"
+        app:rv_cornerRadius="6dp"
+        app:rv_strokeColor="@color/color_999999"
+        app:rv_strokeWidth="1px" />
+</androidx.constraintlayout.widget.ConstraintLayout>

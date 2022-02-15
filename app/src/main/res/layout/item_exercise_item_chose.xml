@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_chose_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/iv_chose_item"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/chose_single"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_chose_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_chose_item"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="A. 商业模式只有大企业才会考虑商业模式只有大企业" />
+</androidx.constraintlayout.widget.ConstraintLayout>

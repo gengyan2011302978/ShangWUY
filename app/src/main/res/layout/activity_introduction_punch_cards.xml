@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title_common" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_buy_punch_cards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_2675FE"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_punch_cards_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    tools:text="数字经济课程打卡" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_punch_cards_partake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_punch_cards_title"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15" />
+
+                <TextView
+                    android:id="@+id/tv_punch_cards_partake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_punch_cards_title"
+                    android:layout_marginStart="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="13dp"
+                    android:layout_toEndOf="@+id/rv_punch_cards_partake"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:text="等4人参与 1次打卡" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_text_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_21"
+                android:drawableStart="@drawable/ic_watch_time"
+                android:drawablePadding="@dimen/dp_3"
+                android:text="活动时间"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/rl_buy_punch_cards" />
+
+            <TextView
+                android:id="@+id/tv_activity_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:textColor="@color/color_666666"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text_time"
+                tools:text="2020年12月14日 至 2020年12月29日" />
+
+            <TextView
+                android:id="@+id/tv_text_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_30"
+                android:drawableStart="@drawable/ic_activity_card"
+                android:drawablePadding="@dimen/dp_3"
+                android:text="活动详情"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_activity_time" />
+
+            <TextView
+                android:id="@+id/tv_activity_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text_details"
+                tools:text="数字经济课程打卡" />
+
+
+            <TextView
+                android:id="@+id/tv_text_associated_courses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_30"
+                android:drawableStart="@drawable/ic_activity_courses"
+                android:drawablePadding="@dimen/dp_3"
+                android:text="关联课程"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_activity_details" />
+
+            <View
+                android:id="@+id/view_go_courses"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_77"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@color/transparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text_associated_courses" />
+
+            <ImageView
+                android:id="@+id/iv_associated_courses"
+                android:layout_width="@dimen/dp_105"
+                android:layout_height="77dp"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text_associated_courses" />
+
+            <TextView
+                android:id="@+id/tv_associated_courses_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_135"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:enabled="true"
+                android:maxLines="1"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text_associated_courses"
+                tools:text="基金从业金从业 必考点训练…" />
+
+            <TextView
+                android:id="@+id/tv_associated_courses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_135"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:enabled="true"
+                android:maxLines="1"
+                android:textColor="@color/color_666666"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_associated_courses_title"
+                tools:text="容莎士比亚”系统集团搬家系统集团…" />
+
+
+            <TextView
+                android:id="@+id/tv_number_students_enrolleds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_135"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:textColor="@color/color_666666"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_associated_courses"
+                tools:text="286人在学" />
+
+            <TextView
+                android:id="@+id/tv_enrolleds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_23"
+                android:gravity="center"
+                android:text="参与打卡，查看更多精彩日记"
+                android:textColor="@color/color_666666"
+                android:textSize="13.5sp"
+                app:layout_constraintTop_toBottomOf="@+id/iv_associated_courses" />
+
+            <TextView
+                android:id="@+id/tv_participationn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="@dimen/dp_91"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/shape_btn_participationn"
+                android:gravity="center"
+                android:minHeight="45dp"
+                android:text="参与打卡"
+                android:textColor="@color/color_white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_enrolleds" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_participationn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_title_common" />
+
+    <include
+        android:id="@+id/cl_accomplish"
+        layout="@layout/layout_accomplish" />
+
+    <View
+        android:id="@+id/view_accomp"
+        android:layout_width="match_parent"
+        android:layout_height="129dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/color_363D52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollview_accomp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="@drawable/bg_authen">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="请拍摄您的二代身份证"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.phjt.view.roundImg.RoundedImageView
+                android:id="@+id/iv_positive"
+                android:layout_width="275dp"
+                android:layout_height="173.5dp"
+                android:layout_marginTop="74dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_positive"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="5dp"
+                app:riv_oval="false" />
+
+            <TextView
+                android:id="@+id/tv_re_positive"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_authen_gray"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_positive"
+                app:layout_constraintEnd_toEndOf="@+id/iv_positive"
+                app:layout_constraintStart_toStartOf="@+id/iv_positive"
+                tools:visibility="visible" />
+
+            <com.phjt.view.roundImg.RoundedImageView
+                android:id="@+id/iv_negative_side"
+                android:layout_width="275dp"
+                android:layout_height="173.5dp"
+                android:layout_marginTop="23.5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_negative_side"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_positive"
+                app:riv_corner_radius="5dp"
+                app:riv_oval="false" />
+
+            <TextView
+                android:id="@+id/tv_negative_side_positive"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_authen_gray"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_negative_side"
+                app:layout_constraintEnd_toEndOf="@+id/iv_negative_side"
+                app:layout_constraintStart_toStartOf="@+id/iv_negative_side"
+                tools:visibility="visible" />
+
+            <com.phjt.view.roundImg.RoundedImageView
+                android:id="@+id/iv_in_hand"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_154"
+                android:layout_marginStart="@dimen/dp_34"
+                android:layout_marginTop="43dp"
+                android:layout_marginEnd="@dimen/dp_34"
+                android:scaleType="centerCrop"
+                android:src="@drawable/iv_auth_hand"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_negative_side_positive"
+                app:riv_corner_radius="5dp"
+                app:riv_oval="false" />
+
+            <TextView
+                android:id="@+id/tv_in_hand"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_authen_gray"
+                android:gravity="center"
+                android:text="重新上传"
+                android:textColor="@color/color_white"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_in_hand"
+                app:layout_constraintEnd_toEndOf="@+id/iv_in_hand"
+                app:layout_constraintStart_toStartOf="@+id/iv_in_hand" />
+
+            <TextView
+                android:id="@+id/tv_auth_submit"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/shape_id_card"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="#ffffffff"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_in_hand" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_auth_submit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

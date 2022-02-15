@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_reply_head_pic"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        app:srcCompat="@drawable/iv_mine_avatar" />
+
+    <TextView
+        android:id="@+id/tv_reply_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@+id/iv_reply_head_pic"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        tools:text="彼岸人" />
+
+
+    <com.ctetin.expandabletextviewlibrary.ExpandableTextView
+        android:id="@+id/tv_reply_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_reply_name"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="14dp"
+        android:layout_toEndOf="@+id/iv_reply_head_pic"
+        android:textColor="@color/color_11141C"
+        android:textSize="14sp"
+        app:ep_need_always_showright="true"
+        app:ep_need_contract="true"
+        app:ep_need_expand="true"
+        android:layout_marginBottom="10dp"
+        tools:text="金融原来是这个样子的呀？" />
+
+    <View
+        android:id="@+id/view_reply_content"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_reply_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="15dp"
+        android:background="@color/color_E4E4E4" />
+</RelativeLayout>

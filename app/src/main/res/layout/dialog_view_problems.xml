@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_share">
+
+    <TextView
+        android:id="@+id/tv_titiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="快捷回复"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_text_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_titiles"
+        android:layout_marginTop="20dp"
+        tools:layout_height="100dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/rv_text_reply"
+        android:layout_marginTop="47dp"
+        android:background="@color/color_white"
+        android:layout_height="49dp">
+        <TextView
+            android:id="@+id/tv_dialog_close"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rv_text_reply"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:text="清空"
+            android:textColor="@color/color_FF9B9C9A"
+            android:textSize="16sp"
+            android:visibility="visible" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@color/color_FF666666"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_close_bottom"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="13dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/color_FFFF650C"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</RelativeLayout>

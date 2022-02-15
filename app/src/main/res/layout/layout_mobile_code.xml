@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            style="@style/TipsText"
+            android:text="@string/mobile" />
+
+        <EditText
+            android:id="@+id/et_mobile"
+            style="@style/EditText_Base"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="0123456789"
+            android:hint="@string/tips_mobile"
+            android:inputType="phone"
+            android:maxLength="11" />
+    </LinearLayout>
+
+    <include
+        style="@style/UnderLine_9_35"
+        layout="@layout/under_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="35dp"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_identify_code"
+            style="@style/TipsText"
+            android:text="@string/identify_code" />
+
+        <EditText
+            android:id="@+id/et_identify_code"
+            style="@style/EditText_Base"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:digits="0123456789"
+            android:hint="@string/tips_identify_code"
+            android:inputType="number"
+            android:maxLength="6" />
+
+
+        <TextView
+            android:id="@+id/tv_get_identify_code"
+            android:layout_width="82dp"
+            android:layout_height="26dp"
+            android:background="@drawable/shape_btn_login"
+            android:gravity="center"
+            android:text="@string/get_identify_code"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_countdown"
+            android:layout_width="82dp"
+            android:layout_height="26dp"
+            android:background="@drawable/shape_bg_countdown"
+            android:gravity="center"
+            android:text="60s"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include
+        style="@style/UnderLine_0_35"
+        layout="@layout/under_line"
+        android:layout_marginTop="@dimen/dp_12"
+        tools:ignore="IncludeLayoutParam" />
+</LinearLayout>

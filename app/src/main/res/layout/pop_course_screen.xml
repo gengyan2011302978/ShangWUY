@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorFFFFFF"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_vertical_pop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_teacher_title_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12.5dp"
+            android:text="讲师"
+            android:textColor="@color/color_999999"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_vertical_pop" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_teacher_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_teacher_title_pop" />
+
+        <com.phjt.view.roundView.RoundTextView
+            android:id="@+id/tv_reset_pop"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="重置"
+            android:textColor="@color/color_333333"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_sure_pop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_teacher_horizontal"
+            app:rv_backgroundColor="@color/color_F7F7F7" />
+
+        <com.phjt.view.roundView.RoundTextView
+            android:id="@+id/tv_sure_pop"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/colorFFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_reset_pop"
+            app:layout_constraintTop_toTopOf="@+id/tv_reset_pop"
+            app:rv_backgroundColor="@color/color_4071FC" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/teacher_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="tv_teacher_title_pop,rv_teacher_horizontal,tv_reset_pop,tv_sure_pop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_bottom_pop"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_constraintTop_toBottomOf="@+id/cl_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF">
+
+    <com.phjt.view.NoScrollViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabLayout"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/tv_noconnect"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_marginTop="68dp"
+        android:background="#FFFFF9DF"
+        android:gravity="center"
+        android:text="当前网络不可用，请检查你的网络"
+        android:textColor="#ffff9a65"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <com.flyco.tablayout.CommonTabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tl_iconHeight="24dp"
+        app:tl_iconWidth="24dp"
+        app:tl_indicator_height="0dp"
+        app:tl_textBold="BOTH"
+        app:tl_textSelectColor="@color/color_F650C"
+        app:tl_textUnselectColor="@color/color_B7B7B7"
+        app:tl_textsize="12sp"
+        app:tl_underline_height="0dp" />
+
+    <ViewStub
+        android:id="@+id/vt_user_guide_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/vt_user_guide_id"
+        android:layout="@layout/layout_user_guide" />
+
+    <ViewStub
+        android:id="@+id/vs_mine_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/vt_mine_guide_id"
+        android:layout="@layout/layout_mine_guide" />
+
+    <RelativeLayout
+        android:id="@+id/relat_circle_above"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_above_bg" />
+
+        <ImageView
+            android:id="@+id/iv_i_know"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="81dp"
+            android:background="@drawable/ic_i_know" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

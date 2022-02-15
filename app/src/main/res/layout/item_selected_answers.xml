@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="16dp">
+
+    <com.phjt.shangxueyuan.widgets.ChangeSizeTextView
+        android:id="@+id/tv_questions_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:lineSpacingExtra="2dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="@color/color_FF353634"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="创业公司的股权架构应该怎么分配，创业公司的股创业公司的股创业公司的股创业公司的股创业公司的股权架构应该怎么分配？" />
+
+    <TextView
+        android:id="@+id/tv_questions_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="7.5dp"
+        android:background="@drawable/bg_questions"
+        android:paddingStart="10dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/color_FFFC8E1A"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_title"
+        tools:text="企业管理" />
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_tutor"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10.5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_label"
+        app:riv_oval="true"
+        tools:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_questions_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="12.5dp"
+        android:textColor="@color/color_FF9B9C9A"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/tv_questions_respondent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_label"
+        tools:text="2019-12-23" />
+
+
+    <TextView
+        android:id="@+id/tv_questions_respondent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="12.5dp"
+        android:textColor="@color/color_FF9B9C9A"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/iv_tutor"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_label"
+        tools:text="耿宴老师/回复于" />
+
+    <TextView
+        android:id="@+id/tv_questions_fabulous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.5dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:minHeight="26dp"
+        android:padding="5dp"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_label"
+        tools:text="99999点赞" />
+
+    <ImageView
+        android:id="@+id/iv_question_fabulous"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10.5dp"
+        android:src="@drawable/ic_zan"
+        app:layout_constraintEnd_toStartOf="@+id/tv_questions_fabulous"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_label" />
+
+    <com.phjt.shangxueyuan.widgets.ChangeSizeTextView
+        android:id="@+id/tv_questions_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:background="@color/color_white"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:maxLines="3"
+        android:padding="5dp"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_respondent"
+        tools:text="其他形式的有限合伙平台搭建，或者是小股占大的表决权。创业公司如果没有核心创始人的话，这个公司走不元老吗兑换" />
+
+
+    <TextView
+        android:id="@+id/tv_reply_transstate"
+        android:layout_width="57.5dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10.5dp"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:background="@drawable/bg_reply"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_content"
+        tools:text="已忽略" />
+
+    <TextView
+        android:id="@+id/tv_refuse_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82.5dp"
+        android:layout_marginTop="10.5dp"
+        android:layout_marginEnd="@dimen/dimen_12"
+        android:textColor="@color/color_FFFF650C"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions_content"
+        tools:text="忽略理由：问题描述不清，请将问题详细描述" />
+
+    <View
+        android:id="@+id/view_fabulous"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_F4F5F7"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_refuse_reason" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

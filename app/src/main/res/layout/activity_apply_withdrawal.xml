@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F8F8F8">
+
+    <include
+        android:id="@+id/apply_withdrawal_title"
+        layout="@layout/layout_title_common" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/apply_withdrawal_title" />
+
+    <View
+        android:id="@+id/apply_withdrawal_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/color_2775FE"
+        app:layout_constraintTop_toBottomOf="@+id/apply_withdrawal_title" />
+
+    <TextView
+        android:id="@+id/withdrawal_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="6dp"
+        android:text="￥"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/apply_withdrawal_line"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_withdrawal_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="18dp"
+        android:background="@null"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textColorHint="@color/color_C6C6C6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/withdrawal_money"
+        app:layout_constraintEnd_toStartOf="@+id/iv_clear"
+        app:layout_constraintStart_toEndOf="@+id/withdrawal_money"
+        tools:hint="@string/withdrawal_amount_lowest" />
+
+    <ImageView
+        android:id="@+id/iv_clear"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="14.5dp"
+        android:src="@drawable/wallet_clear"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/apply_withdrawal_line"
+        app:layout_constraintEnd_toEndOf="@+id/apply_withdrawal_line"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/withdrawal_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/withdrawal_amount"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/apply_withdrawal_line"
+        app:layout_constraintTop_toBottomOf="@+id/apply_withdrawal_line" />
+
+    <TextView
+        android:id="@+id/tv_withdrawal_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/withdrawal_amount"
+        app:layout_constraintTop_toTopOf="@+id/withdrawal_amount"
+        tools:text="¥200" />
+
+    <TextView
+        android:id="@+id/tv_apply_withdrawal"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/selector_apply_withdrawal"
+        android:gravity="center"
+        android:text="@string/wallet_apply_withdrawal"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

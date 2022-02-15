@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/comment_detail_layout"
+        layout="@layout/layout_title_common" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_write_comment"
+        app:layout_constraintTop_toBottomOf="@+id/comment_detail_layout">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:elevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+                <com.phjt.view.roundImg.RoundedImageView
+                    android:id="@+id/iv_reply_icon"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="15.5dp"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_oval="true"
+                    tools:src="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/tv_reply_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17.5dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/iv_reply_icon"
+                    app:layout_constraintTop_toTopOf="@+id/iv_reply_icon"
+                    tools:text="137***9314" />
+
+                <ImageView
+                    android:id="@+id/iv_reply_vip"
+                    android:layout_width="23dp"
+                    android:layout_height="12.5dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/ic_vip"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_reply_phone"
+                    app:layout_constraintStart_toEndOf="@+id/tv_reply_phone"
+                    app:layout_constraintTop_toTopOf="@+id/tv_reply_phone" />
+
+                <TextView
+                    android:id="@+id/tv_reply_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_reply_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_reply_phone"
+                    tools:text="2020-09-01 13:00" />
+
+                <TextView
+                    android:id="@+id/tv_reply_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15.5dp"
+                    android:lineSpacingExtra="1dp"
+                    android:textColor="@color/color_333333"
+                    android:textSize="16sp"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_reply_icon"
+                    tools:text="金融原来是这个样子的呀？可能我之前学的都不叫金融，听了翟老师的课程才恍然大悟是的发生的发是的发生的。" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_reply_img"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintStart_toStartOf="@+id/tv_reply_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_reply_content" />
+
+                <View
+                    android:id="@+id/line1_reply"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12.5dp"
+                    android:background="@color/color_E1E1E1"
+                    app:layout_constraintTop_toBottomOf="@+id/rv_reply_img" />
+
+                <View
+                    android:id="@+id/line2_reply"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="36.5dp"
+                    android:background="@color/color_F8F8F8"
+                    app:layout_constraintTop_toBottomOf="@+id/line1_reply" />
+
+                <ImageView
+                    android:id="@+id/iv_like"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginStart="58dp"
+                    android:padding="5dp"
+                    android:src="@drawable/selector_course_zan"
+                    app:layout_constraintBottom_toTopOf="@+id/line2_reply"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line1_reply" />
+
+                <TextView
+                    android:id="@+id/tv_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/color_FF666666"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_like"
+                    app:layout_constraintStart_toEndOf="@+id/iv_like"
+                    app:layout_constraintTop_toTopOf="@+id/iv_like"
+                    tools:text="99" />
+
+                <ImageView
+                    android:id="@+id/iv_reply"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginEnd="86dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_reply_un"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_like"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/iv_like" />
+
+                <TextView
+                    android:id="@+id/tv_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/color_FF666666"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_like"
+                    app:layout_constraintStart_toEndOf="@+id/iv_reply"
+                    app:layout_constraintTop_toTopOf="@+id/iv_like"
+                    tools:text="99" />
+
+                <TextView
+                    android:id="@+id/tv_reply_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="19dp"
+                    android:text="@string/reply_all"
+                    android:textColor="@color/color_666666"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/line2_reply" />
+
+                <TextView
+                    android:id="@+id/tv_reply_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_999999"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_reply_all"
+                    app:layout_constraintStart_toEndOf="@+id/tv_reply_all"
+                    app:layout_constraintTop_toTopOf="@+id/tv_reply_all"
+                    tools:text="（3）" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_comment_reply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_write_comment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_DADADA"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/comment_write"
+            android:drawablePadding="3.5dp"
+            android:text="@string/write_comment"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_reply_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_F7F7F7"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/et_reply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5.5dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="4.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_white_bg"
+            android:hint="评论"
+            android:maxLength="1000"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="@color/color_696868"
+            android:textColorHint="@color/color_B0B0B0"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_reply_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.5dp"
+            android:layout_marginEnd="5.5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="发送"
+            android:textColor="@color/color_2673FE"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

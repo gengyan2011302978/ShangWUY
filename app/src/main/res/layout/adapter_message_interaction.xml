@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relat_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginTop="14.5dp"
+        tools:text="您的提问被回答的提问被回答的提问被回答的提问被回答的提问被回答的提问被回答"
+        android:maxEms="12"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15.5dp"
+        tools:text="2020-01-13 15:22"
+        android:textColor="@color/color_FF989898"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_message_commont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginRight="15.5dp"
+        tools:text="日前，京东重磅推出人工智能写作项目“莎士比亚”系统。据悉，该系统在借鉴"
+        android:textColor="#FF989898"
+        android:textSize="15sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorEEEEEE"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginRight="15.5dp"
+        android:layout_below="@+id/tv_message_commont"/>
+</RelativeLayout>

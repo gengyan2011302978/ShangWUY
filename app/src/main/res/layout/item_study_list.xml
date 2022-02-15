@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_21">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_audition_item"
+        android:layout_width="105dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="18.5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="4dp"
+        tools:src="@mipmap/ic_launcher" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_off_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="已下架"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_audition_item"
+        app:layout_constraintEnd_toEndOf="@+id/iv_audition_item"
+        app:layout_constraintStart_toStartOf="@+id/iv_audition_item"
+        app:rv_backgroundColor="#80000000"
+        app:rv_cornerRadius_BL="4dp"
+        app:rv_cornerRadius_BR="4dp" />
+
+    <TextView
+        android:id="@+id/tv_audition_title_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="1dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_audition_item"
+        app:layout_constraintTop_toTopOf="@+id/iv_audition_item"
+        tools:text="普华集团搬家啦" />
+
+    <TextView
+        android:id="@+id/tv_audition_content_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_audition_title_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_title_item"
+        tools:text="莎士比亚”系统集团搬家系统集团系统集团搬" />
+
+    <TextView
+        android:id="@+id/tv_study_people_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/color_979797"
+        android:textSize="13.5sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_audition_content_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_content_item"
+        tools:text="286人在学" />
+
+    <ProgressBar
+        android:id="@+id/pb_study_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="257.5dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="6.5dp"
+        android:max="100"
+        android:progressDrawable="@drawable/drawable_progress_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_study_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:textColor="@color/color_999999"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="已学习80%" />
+
+    <View
+        android:id="@+id/gray_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#66FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

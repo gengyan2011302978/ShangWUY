@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:id="@+id/cb_click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginRight="15dp"
+        android:button="@drawable/checkbox_selector"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/iv_pdf_item"
+        android:layout_width="wrap_content"
+        android:layout_height="14.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="13.5dp"
+        android:layout_marginBottom="13.5dp"
+        android:gravity="center"
+        android:minWidth="26dp"
+        android:text="PDF"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cb_click"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rv_backgroundColor="@color/color_F25257"
+        app:rv_cornerRadius="2dp" />
+
+    <TextView
+        android:id="@+id/tv_name_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="1、这就是金融的秘密是不是是"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pdf_item"
+        app:layout_constraintEnd_toStartOf="@+id/pb_tv_item"
+        app:layout_constraintStart_toEndOf="@+id/iv_pdf_item"
+        app:layout_constraintTop_toTopOf="@+id/iv_pdf_item" />
+
+    <com.phjt.shangxueyuan.widgets.ProgressTextView
+        android:id="@+id/pb_tv_item"
+        android:layout_width="51.5dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_pdf_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_name_item"
+        app:layout_constraintTop_toTopOf="@+id/iv_pdf_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_comment_icon_item"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/iv_mine_avatar"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tv_comment_phone_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10.5dp"
+        android:textColor="@color/color999999"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_comment_icon_item"
+        app:layout_constraintTop_toTopOf="@+id/iv_comment_icon_item"
+        tools:text="137***9314" />
+
+    <ImageView
+        android:id="@+id/iv_vip"
+        android:layout_width="16dp"
+        android:layout_height="8.5dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_comment_phone_item"
+        app:layout_constraintLeft_toRightOf="@+id/tv_comment_phone_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_comment_phone_item"
+        tools:src="@drawable/ic_vip" />
+
+    <TextView
+        android:id="@+id/tv_comment_content_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.5dp"
+        android:layout_marginBottom="15dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="1dp"
+        android:maxEms="20"
+        android:singleLine="true"
+        android:textColor="@color/color_696868"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_comment_phone_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comment_phone_item"
+        tools:text="金融原来是这个样子的金融原来是这个样子的呀金融原来是这个样子的呀金融原来是这个样子的呀金融原来是这个样子的呀呀？可能我之前学的都不叫金融，听了翟老师的课程才恍然大悟是的发生的发是的发生的。" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

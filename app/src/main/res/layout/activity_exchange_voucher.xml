@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <include
+        android:id="@+id/tilte"
+        layout="@layout/layout_title_common" />
+    <TextView
+        android:id="@+id/tv_expiration_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="15.5dp"
+        android:background="@color/color_FFF9DF"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp_5"
+        android:text="过期优惠券仅显示半年数据"
+        android:textColor="@color/color_FF9A65"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilte"/>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/srl_exchange_voucher"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_1"
+            app:layout_constraintBottom_toTopOf="@+id/view_invalid_coupons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_expiration_reminder">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_exchange_voucher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <View
+        android:id="@+id/view_invalid_coupons"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/tv_invalid_coupons"
+        app:layout_constraintStart_toStartOf="parent" />
+    <TextView
+        android:id="@+id/tv_invalid_coupons"
+        android:layout_width="match_parent"
+        android:layout_height="37.5dp"
+        android:layout_marginStart="52.5dp"
+        android:layout_marginEnd="52.5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/color_F0F0F0"
+        android:gravity="center"
+        android:text="查看失效优惠券"
+        android:textColor="@color/color_999999"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

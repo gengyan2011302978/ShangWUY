@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_mine_head_pic"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/iv_mine_avatar"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true"
+        app:src="@drawable/iv_mine_avatar"
+        app:srcCompat="@drawable/iv_mine_avatar" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="137***9314"
+        android:textColor="#ff333333"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_mine_head_pic"
+        app:layout_constraintTop_toTopOf="@+id/iv_mine_head_pic" />
+
+    <ImageView
+        android:id="@+id/iv_vip"
+        android:layout_width="23dp"
+        android:layout_height="12.5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/ic_vip"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_name"
+        app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="16.5dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/more_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_name" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:text="09-01"
+        android:textColor="#ff999999"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@+id/iv_mine_head_pic"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/iv_mine_head_pic">
+
+        <RelativeLayout
+            android:id="@+id/relat_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_isTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11.5dp"
+                android:background="@drawable/bg_ff5e5e_rectangle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="置顶"
+                android:textColor="#ffffffff"
+                android:textSize="11sp" />
+
+            <com.ctetin.expandabletextviewlibrary.ExpandableTextView
+                android:id="@+id/tv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10.5dp"
+                android:layout_marginEnd="15.5dp"
+                android:layout_marginBottom="15dp"
+                android:lineSpacingExtra="1dp"
+                android:textColor="@color/color_696868"
+                android:textSize="14sp"
+                app:ep_need_always_showright="true"
+                app:ep_need_contract="true"
+                app:ep_need_expand="true"
+                tools:text="金融原来是这个样子的呀？可能我之前学的都不叫金融，听了翟老师的课程才恍然大悟是的发生的发是的发生的。" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/circle_dynamic_image"
+            android:layout_width="224dp"
+            android:layout_height="126dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/ic_bottom_study" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_image_course"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="17.5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="15dp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_ffeeeeee_rectangle"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="12dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ic_table" />
+
+            <TextView
+                android:id="@+id/tv_topicName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="数字经济集训营"
+                android:textColor="#ff959595"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:layout_width="4.5dp"
+                android:layout_height="6.5dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ic_local"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <include layout="@layout/zan_comment_share_item" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

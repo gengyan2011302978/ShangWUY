@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/layout_title_common" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_20" />
+
+            <com.phjt.shangxueyuan.widgets.ChangeSizeTextView
+                android:id="@+id/tv_questions_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="创业公司的股权架构应该怎么分配，创业公司的股权架构应该怎么分配？" />
+
+            <TextView
+                android:id="@+id/tv_questions_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_questions"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp"
+                android:textColor="@color/color_FFFC8E1A"
+                android:textSize="12sp"
+                tools:text="企业管理" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/tv_questioner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="14sp"
+                    tools:text="提问者：" />
+
+                <TextView
+                    android:id="@+id/tv_time_bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/tv_questioner"
+                    android:textColor="@color/color_999999"
+                    android:textSize="14sp"
+                    tools:text="2019-12-12 20:30" />
+            </RelativeLayout>
+
+
+            <com.ctetin.expandabletextviewlibrary.ExpandableTextView
+                android:id="@+id/tv_questions_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_reply_name"
+                android:background="@drawable/bg_card"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="14dp"
+                android:lineSpacingExtra="2dp"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/iv_reply_head_pic"
+                android:textColor="@color/color_FF5F605E"
+                android:textSize="15sp"
+                app:ep_need_always_showright="true"
+                app:ep_need_contract="true"
+                app:ep_need_expand="true"
+                app:ep_max_line="3"
+                app:ep_expand_color="@color/color_FF999999"
+                app:ep_contract_color="@color/color_FF999999"
+                tools:text="其他形式的有限合伙平台搭建，或者是小股占大的表决权。创业公司如果没有核心创始人的话，这个公司走不元老吗兑换" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcy_released"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_put_questions_to_content"
+                app:spanCount="3" />
+
+            <View
+                android:id="@+id/view_vo"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/color_F4F5F7"
+                android:visibility="gone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="15dp">
+
+                <com.phjt.view.roundImg.RoundedImageView
+                    android:id="@+id/iv_tutor"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_oval="true"
+                    tools:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/tv_tutor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:textColor="@color/color_666666"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_tutor"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="余秋雨" />
+
+                <TextView
+                    android:id="@+id/tv_teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/string_teacher"
+                    android:textColor="@color/color_404040"
+                    android:textSize="12sp"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tutor_name"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_reply_and"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toEndOf="@+id/iv_tutor"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_teacher_name"
+                    tools:text="啦啦啦:" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.phjt.shangxueyuan.widgets.ChangeSizeTextView
+                android:id="@+id/tv_reply_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                android:visibility="gone"
+                tools:text="查看问题-已被忽略:" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_selected_answers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="@dimen/dp_15" />
+
+            <View
+                android:id="@+id/view_udge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_40" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

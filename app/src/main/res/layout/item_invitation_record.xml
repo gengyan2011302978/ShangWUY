@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="19dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="15dp">
+
+    <TextView
+        android:id="@+id/tv_invitation_phone_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="137****1993" />
+
+    <TextView
+        android:id="@+id/tv_invitation_state_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_999999"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_invitation_phone_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_invitation_phone_item"
+        tools:text="已激活" />
+</androidx.constraintlayout.widget.ConstraintLayout>

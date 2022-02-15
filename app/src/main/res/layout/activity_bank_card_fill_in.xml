@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/card_fill_in_title"
+        layout="@layout/layout_title_common" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/bank_card_fill_in_left"
+        android:text="姓名"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_fill_in_title" />
+
+    <EditText
+        android:id="@+id/et_name"
+        style="@style/bank_card_fill_in_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入姓名"
+        android:maxLength="10"
+        app:layout_constraintBottom_toBottomOf="@+id/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="@+id/name" />
+
+    <View
+        android:id="@+id/line1"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/account_number"
+        style="@style/bank_card_fill_in_left"
+        android:text="收款账号"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <EditText
+        android:id="@+id/et_account_number"
+        style="@style/bank_card_fill_in_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入收款账号"
+        android:inputType="number"
+        android:maxLength="21"
+        app:layout_constraintBottom_toBottomOf="@+id/account_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/account_number"
+        app:layout_constraintTop_toTopOf="@+id/account_number" />
+
+    <View
+        android:id="@+id/line2"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/account_number" />
+
+    <TextView
+        android:id="@+id/receiving_bank"
+        style="@style/bank_card_fill_in_left"
+        android:text="收款银行"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <EditText
+        android:id="@+id/et_receiving_bank"
+        style="@style/bank_card_fill_in_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入收款银行"
+        android:maxLength="10"
+        app:layout_constraintBottom_toBottomOf="@+id/receiving_bank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/receiving_bank"
+        app:layout_constraintTop_toTopOf="@+id/receiving_bank" />
+
+    <View
+        android:id="@+id/line3"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/receiving_bank" />
+
+
+    <TextView
+        android:id="@+id/deposit_bank"
+        style="@style/bank_card_fill_in_left"
+        android:text="开户银行"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+    <EditText
+        android:id="@+id/et_deposit_bank"
+        style="@style/bank_card_fill_in_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入开户银行"
+        android:maxLength="15"
+        app:layout_constraintBottom_toBottomOf="@+id/deposit_bank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/deposit_bank"
+        app:layout_constraintTop_toTopOf="@+id/deposit_bank" />
+
+    <View
+        android:id="@+id/line4"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deposit_bank" />
+
+    <TextView
+        android:id="@+id/phone"
+        style="@style/bank_card_fill_in_left"
+        android:text="持卡人手机号"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        style="@style/bank_card_fill_in_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入持卡人手机号"
+        android:inputType="phone"
+        android:maxLength="11"
+        app:layout_constraintBottom_toBottomOf="@+id/phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone"
+        app:layout_constraintTop_toTopOf="@+id/phone" />
+
+    <View
+        android:id="@+id/line5"
+        style="@style/line_bank_card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_card_save"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line5"
+        app:rv_backgroundColor="@color/color_E3E3E3"
+        app:rv_cornerRadius="6dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relat_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="22dp"
+    android:layout_marginRight="15dp">
+
+    <CheckBox
+        android:id="@+id/cb_click"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:button="@drawable/checkbox_selector"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/image_type"
+        android:layout_width="26dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/cb_click"
+        android:background="@drawable/pdf_icon"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2.5dp"
+        android:layout_toRightOf="@+id/image_type"
+        android:text="1、这就是金融的秘密是不是是这就是金融的秘密是不是是..."
+        android:textColor="#ff333333"
+        android:layout_toLeftOf="@+id/tv_download_status"
+        android:layout_marginRight="30dp"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_download_status"
+        android:layout_width="52dp"
+        android:layout_height="21dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:background="@color/color_2871FF"
+        android:gravity="center"
+        android:text="已下载"
+        android:textColor="#ffffffff"
+        android:textSize="12sp" />
+</RelativeLayout>

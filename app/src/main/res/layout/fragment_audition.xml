@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF">
+
+    <TextView
+        android:id="@+id/tv_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:gravity="center"
+        android:paddingStart="9dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="9dp"
+        android:paddingBottom="12dp"
+        android:text="最新"
+        android:textColor="@color/color_868686"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingStart="9dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="9dp"
+        android:paddingBottom="12dp"
+        android:text="最热"
+        android:textColor="@color/color_868686"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_new"
+        app:layout_constraintTop_toTopOf="@+id/tv_new" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="21.5dp"
+        android:layout_marginEnd="15dp"
+        android:drawableRight="@drawable/course_category_arrow"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:paddingStart="11dp"
+        android:paddingEnd="6dp"
+        android:text="讲师"
+        android:textColor="@color/color_868686"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_hot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_hot"
+        app:rv_backgroundColor="@color/color_F5F5F5"
+        app:rv_cornerRadius="10dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_F5F5F5"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hot"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_tip_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_FFF9DF"
+            android:lineSpacingExtra="2dp"
+            android:paddingStart="16dp"
+            android:paddingTop="4.5dp"
+            android:paddingEnd="26.5dp"
+            android:paddingBottom="7.5dp"
+            android:textColor="@color/color_FF9A65"
+            android:textSize="13sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="精品试听：提供的免费试听课，里面包含大量翟老师的视频课程，赶快体验学习吧~" />
+
+        <ImageView
+            android:id="@+id/iv_tip_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/course_tip_close"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_tip_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_tip_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_audition"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_tip">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_audition"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

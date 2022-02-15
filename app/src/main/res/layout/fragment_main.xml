@@ -1,0 +1,1385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/canstra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFFFFFF"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srf_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nt_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:image_scale_type="center_crop"
+                    app:indicator_drawable_selected="@drawable/banner_indicator_select"
+                    app:indicator_drawable_unselected="@drawable/banner_indicator_unselect"
+                    app:indicator_height="3dp"
+                    app:indicator_margin="2dp"
+                    app:indicator_width="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/ll_icons_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintTop_toBottomOf="@id/banner">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_master"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/authority_icon" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="去考证"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_practice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/boutique_icon" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="9dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/boutique_icon_free" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_practice"
+                            android:layout_centerHorizontal="true"
+                            android:text="尝鲜课"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_growth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_growth" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="进社群"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_answer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/icon_answer" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="来咨询"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_icons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_icons_top">
+
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/tv_master"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:drawableTop="@drawable/authority_icon"-->
+                    <!--                        android:drawablePadding="6dp"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:text="权威证书"-->
+                    <!--                        android:textColor="@color/color_333333"-->
+                    <!--                        android:textSize="14sp" />-->
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/tv_practice"-->
+                    <!--                        android:layout_width="0dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:drawableTop="@drawable/boutique_icon"-->
+                    <!--                        android:drawablePadding="6dp"-->
+                    <!--                        android:gravity="center"-->
+                    <!--                        android:text="精品试听"-->
+                    <!--                        android:textColor="@color/color_333333"-->
+                    <!--                        android:textSize="14sp" />-->
+
+                    <TextView
+                        android:id="@+id/tv_circle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/treasure_icon"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="备考宝典"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_project"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/vip_icon"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="VIP会员"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_iconst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_icons">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/iv_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/ic_boc_main" />
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="9dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="20dp"
+                            android:src="@drawable/icon_hot_top" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_number"
+                            android:layout_centerHorizontal="true"
+                            android:text="BOC商科"
+                            android:textColor="#ff333333"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_digital_economy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_number"
+                        android:gravity="center"
+                        android:text="数字经济"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_boc_course"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_gold"
+                        android:gravity="center"
+                        android:text="财商文化"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tv_passageway"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/ic_culture"
+                        android:gravity="center"
+                        android:text="职场提升"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_invitation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@drawable/main_invitation"
+                        android:gravity="center"
+                        android:text="邀请有礼"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_banner"
+                    android:layout_width="0dp"
+                    android:layout_height="142dp"
+                    android:visibility="gone"
+                    android:background="@drawable/main_black_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycle_playback" />
+
+                <com.youth.banner.Banner
+                    android:id="@+id/ic_banner_center"
+                    android:layout_width="0dp"
+                    android:layout_height="102dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="16dp"
+                    app:image_scale_type="fit_xy"
+                    app:indicator_drawable_selected="@drawable/banner_indicator_select"
+                    app:indicator_drawable_unselected="@drawable/banner_indicator_unselect"
+                    app:indicator_height="3dp"
+                    app:indicator_margin="2dp"
+                    android:visibility="gone"
+                    app:indicator_width="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycle_playback" />
+
+                <com.youth.banner.Banner
+                    android:id="@+id/ic_banner_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="18dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/recycle_good_course" />
+
+                <RelativeLayout
+                    android:id="@+id/ll_icons_tow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_iconst">
+
+                    <RelativeLayout
+                        android:id="@+id/relat_jpst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="61dp">
+
+                        <ImageView
+                            android:id="@+id/iv_jpst"
+                            android:layout_width="109dp"
+                            android:layout_height="54dp"
+                            android:layout_alignParentBottom="true"
+                            android:background="@drawable/boutique_bg" />
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="21dp"
+                            android:layout_marginLeft="71dp"
+                            android:background="@drawable/recommend_icon" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_kztd"
+                        android:layout_width="109dp"
+                        android:layout_height="54dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/textual_research_bg" />
+
+                    <ImageView
+                        android:id="@+id/iv_cftd"
+                        android:layout_width="109dp"
+                        android:layout_height="54dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/get_rich_bg" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_margin="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_icons_tow">
+
+                    <TextView
+                        android:id="@+id/iv_notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:text="VIP购买："
+                        android:textColor="#FF9A65"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <com.phjt.shangxueyuan.widgets.NoticeFlipView
+                        android:id="@+id/marquee_notice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/iv_notice"
+                        app:animDuration="1000"
+                        app:interval="3000"
+                        app:isSetAlphaAnim="true" />
+
+                    <TextView
+                        android:id="@+id/tv_gotobuy"
+                        android:layout_width="68dp"
+                        android:layout_height="20.5dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="9dp"
+                        android:background="@drawable/bg_ffa83e_rectangle"
+                        android:gravity="center"
+                        android:text="点击购买"
+                        android:textColor="#ffffffff"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relat_playback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="9dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rl_notice">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="直播"
+                        android:textColor="#ff333333"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="查看全部"
+                        android:textColor="@color/color_666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_playback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17.5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/relat_playback" />
+
+                <RelativeLayout
+                    android:id="@+id/relat_coursetitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="9dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_banner_center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="免费公开课"
+                        android:textColor="#ff333333"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="17dp"
+                        android:layout_marginBottom="3dp"
+                        android:text="查看全部"
+                        android:textColor="@color/color_666666"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle_good_course"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="17.5dp"
+                    android:layout_marginRight="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/relat_coursetitle" />
+
+                <RelativeLayout
+                    android:id="@+id/relat_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_banner_bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BOC商科证书"
+                        android:textColor="#ff333333"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_next" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@color/colorFFFFFF"
+                    app:layout_constraintTop_toBottomOf="@+id/relat_title">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/relat_master"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="9dp"
+                            android:layout_marginBottom="25dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/image1"
+                                android:layout_width="119dp"
+                                android:layout_height="174dp"
+
+                                android:background="@drawable/hompage_by_bg" />
+
+                            <TextView
+                                android:id="@+id/text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/image1"
+                                android:text="权威证书"
+                                android:textColor="#ff0a0a23"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="2dp"
+                                android:layout_below="@+id/text1"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5.5dp"
+                                android:layout_toRightOf="@+id/image1"
+                                android:background="@color/color_333333"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/textttt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text1"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_toRightOf="@+id/image1"
+                                android:text="BOC 商业职业认证证书"
+                                android:textColor="#ff333333"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text1"
+                                android:layout_marginTop="13dp"
+                                android:layout_toRightOf="@+id/textttt"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="(Business occupation certificate)"
+                                android:textColor="#ff333333"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text1"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/image1"
+                                android:ellipsize="end"
+                                android:lineSpacingExtra="5px"
+                                android:maxLines="3"
+                                android:text="BOC商科证书是由普华商学院联合权威机构共同推出职业能力证书，实现高薪择业，打造商业领袖。"
+                                android:textColor="#333333"
+                                android:textSize="13sp" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/image1">
+
+                                <ImageView
+                                    android:layout_width="68.5dp"
+                                    android:layout_height="69dp"
+                                    android:background="@drawable/auth_icon" />
+
+                                <ImageView
+                                    android:layout_width="68.5dp"
+                                    android:layout_height="69dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/auth_icon1" />
+
+                                <ImageView
+                                    android:layout_width="68.5dp"
+                                    android:layout_height="69dp"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/auth_icon2" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relat_practice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginBottom="25dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/image2"
+                                android:layout_width="119dp"
+                                android:layout_height="119dp"
+                                android:background="@drawable/hompage_by1_bg" />
+
+                            <TextView
+                                android:id="@+id/text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/image2"
+                                android:text="教学体系"
+                                android:textColor="#ff0a0a23"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="2dp"
+                                android:layout_below="@+id/text2"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5.5dp"
+                                android:layout_toRightOf="@+id/image2"
+                                android:background="@color/color_333333" />
+
+                            <TextView
+                                android:id="@+id/textt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text2"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_toRightOf="@+id/image2"
+                                android:lineSpacingExtra="1.5dp"
+                                android:text="普华商学院院长翟山鹰老师，领衔各行业、岗位头部大咖进行全程沙盘式教学，云集百余位实操专家的智慧体系，九大模块全面覆盖企业运营各环节。"
+                                android:textColor="#ff333333"
+                                android:textSize="11sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/image2"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/texttt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="金融理论与商业实践结合"
+                                    android:textColor="#ff333333"
+                                    android:textSize="12sp" />
+
+                                <ImageView
+                                    android:layout_width="13dp"
+                                    android:layout_height="13dp"
+                                    android:layout_below="@+id/textt"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_toRightOf="@+id/texttt"
+                                    android:background="@drawable/hompage_right_icon" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relat_circle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginBottom="25dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/image3"
+                                android:layout_width="119dp"
+                                android:layout_height="119dp"
+                                android:background="@drawable/hompage_by2_bg" />
+
+                            <TextView
+                                android:id="@+id/text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/image3"
+                                android:text="高薪择业"
+                                android:textColor="#ff0a0a23"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="2dp"
+                                android:layout_below="@+id/text3"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5.5dp"
+                                android:layout_toRightOf="@+id/image3"
+                                android:background="@color/color_333333" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text3"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_toRightOf="@+id/image3"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:background="@drawable/hompage_list_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="4.5dp"
+                                        android:text="金融+商业领域敲门砖"
+                                        android:textColor="#ff333333"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:background="@drawable/hompage_list_icon1" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="4.5dp"
+                                        android:text="0"
+                                        android:textColor="#ff333333"
+                                        android:textSize="13sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="基础考证  不就业全额退款"
+                                        android:textColor="#ff333333"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:background="@drawable/hompage_list_icon2" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="4.5dp"
+                                        android:text="薪资"
+                                        android:textColor="#ff333333"
+                                        android:textSize="11sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="PLUS"
+                                        android:textColor="#ff333333"
+                                        android:textSize="12sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="毕业就能拿高薪"
+                                        android:textColor="#ff333333"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="13dp"
+                                        android:layout_height="13dp"
+                                        android:background="@drawable/hompage_right_icon" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="4.5dp"
+                                        android:text="全球"
+                                        android:textColor="#ff333333"
+                                        android:textSize="11sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="50000"
+                                        android:textColor="#ff333333"
+                                        android:textSize="13sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="+"
+                                        android:textColor="#ff333333"
+                                        android:textSize="13sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="知名企业随便挑"
+                                        android:textColor="#ff333333"
+                                        android:textSize="11sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relat_project"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginBottom="50dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/image4"
+                                android:layout_width="119dp"
+                                android:layout_height="119dp"
+                                android:background="@drawable/hompage_by3_bg" />
+
+                            <TextView
+                                android:id="@+id/text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/image4"
+                                android:text="创业基金"
+                                android:textColor="#ff0a0a23"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="2dp"
+                                android:layout_below="@+id/text4"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5.5dp"
+                                android:layout_toRightOf="@+id/image4"
+                                android:background="@color/color_333333" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/text4"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="14dp"
+                                android:layout_toRightOf="@+id/image4"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1亿元创业专项资金， 创业者赢在起跑线！"
+                                    android:textColor="#ff666666"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="获得BOC高级证书即可申请"
+                                    android:textColor="#ff666666"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="单个项目最低可申请100万"
+                                    android:textColor="#ff666666"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="真正无抵押、低利息"
+                                    android:textColor="#ff666666"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="10万+企业主资源共享"
+                                    android:textColor="#ff666666"
+                                    android:textSize="11sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/relat_business_train"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="9dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="热门推荐"
+                                android:textColor="#ff333333"
+                                android:textSize="21sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="17dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="查看全部"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/btn_next" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycle_business_train"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="7.5dp"
+                            android:layout_marginRight="16dp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycle_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="17.5dp"
+                            android:layout_marginRight="16dp" />
+                        <!-- 商科直通车 end -->
+
+                        <!-- 数字经济新趋势 start -->
+                        <!--                        <ImageView-->
+                        <!--                            android:id="@+id/line_digital_economy"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="10dp"-->
+                        <!--                            android:background="#fff5f5f5" />-->
+
+                        <!--                        <RelativeLayout-->
+                        <!--                            android:id="@+id/relat_digital_economy"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginStart="15dp"-->
+                        <!--                            android:layout_marginTop="24dp"-->
+                        <!--                            android:layout_marginEnd="9dp">-->
+
+                        <!--                            <TextView-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:text="数字经济新趋势"-->
+                        <!--                                android:textColor="#ff333333"-->
+                        <!--                                android:textSize="16sp"-->
+                        <!--                                android:textStyle="bold" />-->
+
+                        <!--                            <TextView-->
+                        <!--                                android:layout_width="wrap_content"-->
+                        <!--                                android:layout_height="wrap_content"-->
+                        <!--                                android:layout_alignParentEnd="true"-->
+                        <!--                                android:layout_centerInParent="true"-->
+                        <!--                                android:layout_marginEnd="17dp"-->
+                        <!--                                android:layout_marginBottom="3dp"-->
+                        <!--                                android:text="查看全部"-->
+                        <!--                                android:textColor="@color/color_666666"-->
+                        <!--                                android:textSize="14sp" />-->
+
+                        <!--                            <ImageView-->
+                        <!--                                android:layout_width="15dp"-->
+                        <!--                                android:layout_height="15dp"-->
+                        <!--                                android:layout_alignParentEnd="true"-->
+                        <!--                                android:layout_centerInParent="true"-->
+                        <!--                                android:background="@drawable/btn_next" />-->
+                        <!--                        </RelativeLayout>-->
+
+                        <!--                        <android.support.v7.widget.RecyclerView-->
+                        <!--                            android:id="@+id/recycle_digital_economy"-->
+                        <!--                            android:layout_width="match_parent"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_marginLeft="16dp"-->
+                        <!--                            android:layout_marginTop="17.5dp" />-->
+                        <!-- 数字经济新趋势 end -->
+
+                        <!-- 财商文化提升 start -->
+                        <ImageView
+                            android:id="@+id/line_financial_culture"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:visibility="gone"
+                            android:background="#fff5f5f5" />
+
+                        <RelativeLayout
+                            android:id="@+id/relat_financial_culture"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginEnd="9dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="VIP精品专享"
+                                android:textColor="#ff333333"
+                                android:textSize="21sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="17dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="查看全部"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/btn_next" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycle_financial_culture"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="17.5dp"
+                            android:layout_marginRight="16dp" />
+                        <!-- 财商文化提升 end -->
+                        <RelativeLayout
+                            android:id="@+id/relat_editor_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginRight="9dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ic_banner_center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-主编精选-"
+                                android:textColor="#ff333333"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="17dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="查看全部"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/btn_next"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycle_editor_course"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="17.5dp"
+                            android:layout_marginRight="16dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/relat_coursetitle" />
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/ic_last_center"
+                            android:layout_width="match_parent"
+                            android:layout_height="102dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="16dp"
+                            android:visibility="visible"
+                            app:image_scale_type="fit_xy"
+                            app:indicator_drawable_selected="@drawable/banner_indicator_select"
+                            app:indicator_drawable_unselected="@drawable/banner_indicator_unselect"
+                            app:indicator_height="3dp"
+                            app:indicator_margin="2dp"
+                            app:indicator_width="10dp" />
+
+                        <ImageView
+                            android:id="@+id/line_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="#fff5f5f5" />
+
+                        <RelativeLayout
+                            android:id="@+id/relat_informationtitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_marginRight="9dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/ic_banner_bottom">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最新资讯"
+                                android:textColor="#ff333333"
+                                android:textSize="21sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginEnd="17dp"
+                                android:layout_marginBottom="3dp"
+                                android:text="查看全部"
+                                android:textColor="@color/color_666666"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/btn_next" />
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycle_hot_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginRight="16dp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="#fff5f5f5" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relat_continue"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/watch_bg"
+            android:elevation="2dp"
+            android:visibility="visible">
+
+            <com.phjt.view.roundImg.RoundedImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="48dp"
+                android:layout_height="52dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/passageway_icon"
+                app:riv_corner_radius="4dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toLeftOf="@+id/iv_continue"
+                android:layout_toRightOf="@+id/iv_logo"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="上次观看：普华集团最厉害的授是？  "
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_continue_watch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="45dp"
+                    android:text="继续观看>"
+                    android:maxLines="1"
+                    android:textColor="#FF9A65"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="25dp"
+                android:src="@drawable/close_icon" />
+
+            <ImageView
+                android:id="@+id/iv_continue"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv_close"
+                android:background="@drawable/ic_continue_play" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relat_activity"
+            android:layout_width="101dp"
+            android:layout_height="97dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="120dp">
+
+            <ImageView
+                android:id="@+id/ic_activity"
+                android:layout_width="101dp"
+                android:layout_height="97dp"
+                android:background="@drawable/hompage_activity_icon"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_close_pop"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/close_main_pop" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

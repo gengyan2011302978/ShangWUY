@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FAF7F8">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_title_common" />
+
+    <FrameLayout
+        android:id="@+id/fl_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <TextView
+            android:id="@+id/tv_change_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="修改密码"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_full_name"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="11dp"
+            android:src="@drawable/iv_mine_arrow"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/color_FAF7F8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_change_password" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_avatar_label"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_full_name">
+
+        <TextView
+            android:id="@+id/tv_info_avatar_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="允许移动网下载"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <com.phjt.shangxueyuan.widgets.SlideButton
+            android:id="@+id/sb_set_wifi"
+            android:layout_width="52dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_avatar_label"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/color_FAF7F8"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_avatar_label" />
+
+    <FrameLayout
+        android:id="@+id/fl_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_avatar_label">
+
+        <TextView
+            android:id="@+id/tv_about_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="关于我们"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_arrows_sex"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="11dp"
+            android:src="@drawable/iv_mine_arrow"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_pr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/color_FAF7F8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_about_us" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_authentication"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_pr">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="身份认证"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_authentication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="31.5dp"
+            android:text="未认证"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_authentication"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="11dp"
+            android:src="@drawable/iv_mine_arrow"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_authentication"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/color_FAF7F8"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_authentication" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_change_security_password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_authentication">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="修改安全密码"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_change_security_password"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="11dp"
+            android:src="@drawable/iv_mine_arrow"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_change_security_password"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/color_FAF7F8"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_change_security_password" />
+
+    <TextView
+        android:id="@+id/tv_out_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="@dimen/dp_76"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shape_btn_login"
+        android:gravity="center"
+        android:minHeight="45dp"
+        android:text="@string/out_login"
+        android:textColor="#ffffffff"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_change_security_password" />
+
+
+    <ImageView
+        android:id="@+id/iv_updates"
+        android:layout_width="23dp"
+        android:layout_height="18.5dp"
+        android:layout_marginBottom="57.5dp"
+        android:src="@drawable/iv_updates"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_updates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="检查更新"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="当前版本号V1.0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

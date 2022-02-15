@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="44dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_screen_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:text="时间倒序"
+        android:textColor="@color/color_FF666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_screen_select"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center_vertical|end"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:paddingStart="@dimen/dimen_1"
+        android:paddingTop="@dimen/dimen_5"
+        android:paddingEnd="@dimen/dimen_5"
+        android:paddingBottom="@dimen/dimen_5"
+        android:src="@drawable/icon_select_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_screen_data"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_screen_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        android:text="已回答"
+        android:textColor="@color/color_FF666666"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_screen_select"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_screen_reply"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:layout_gravity="center_vertical|end"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dimen_1"
+        android:paddingTop="@dimen/dimen_5"
+        android:paddingEnd="@dimen/dimen_5"
+        android:paddingBottom="@dimen/dimen_5"
+        android:src="@drawable/icon_select_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_screen_reply"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_screen_data"
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="21.5dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_screen_reply"
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_screen_data"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

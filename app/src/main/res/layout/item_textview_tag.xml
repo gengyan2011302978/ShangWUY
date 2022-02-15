@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.phjt.view.roundView.RoundTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="5dp"
+    android:paddingTop="1.5dp"
+    android:paddingEnd="5dp"
+    android:paddingBottom="1.5dp"
+    android:textColor="@color/colorFFFFFF"
+    android:textSize="12sp"
+    app:rv_backgroundColor="@color/color_387BFE"
+    app:rv_cornerRadius="2.5dp"
+    tools:text="多选题" />

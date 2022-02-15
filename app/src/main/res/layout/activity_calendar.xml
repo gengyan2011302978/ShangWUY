@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:replace="android:appComponentFactory">
+
+    <include
+        android:id="@+id/coupon_title"
+        layout="@layout/layout_title_common" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_calendar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_left_month"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="56dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_calendar_left" />
+
+            <ImageView
+                android:id="@+id/iv_left_year"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_year_calendar_left" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_today_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="2019年 8 月 11 日"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_calendar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/tv_calendyear_right"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/ic_year_calendar_right" />
+
+            <ImageView
+                android:id="@+id/tv_calendarMonth_right"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="56dp"
+                android:background="@drawable/ic_calendar_right" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.haibin.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:current_month_text_color="#ff2e2e39"
+        app:max_select_range="-1"
+        app:min_select_range="-1"
+        app:month_view="com.phjt.shangxueyuan.widgets.SimpleMonthView"
+        app:month_view_auto_select_day="last_select_day_ignore_current"
+        app:month_view_show_mode="mode_only_current"
+        app:other_month_lunar_text_color="#e1e1e1"
+        app:other_month_text_color="#e1e1e1"
+        app:scheme_lunar_text_color="#CFCFCF"
+        app:scheme_text="假"
+        app:scheme_text_color="#333"
+        app:scheme_theme_color="#ffffff"
+        app:select_mode="range_mode"
+        app:selected_lunar_text_color="#ffffff"
+        app:selected_text_color="#ffffff"
+        app:selected_theme_color="#2675FE"
+        app:week_background="#fff"
+        app:week_bar_height="46dp"
+        app:week_line_background="#00000000"
+        app:week_line_margin="16dp"
+        app:week_start_with="sun"
+        app:week_text_color="#ff31313c"
+        app:week_text_size="16sp"
+        app:year_view_background="#f6f6f6"
+        app:year_view_day_text_color="#333333"
+        app:year_view_day_text_size="8sp"
+        app:year_view_month_text_color="#2675FE"
+        app:year_view_month_text_size="20sp"
+        app:year_view_scheme_color="#2675FE"
+        app:year_view_week_height="0dp"
+        app:year_view_week_text_color="#ffffff"
+        app:year_view_week_text_size="7sp" />
+
+    <TextView
+        android:id="@+id/tv_punchCardType"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_2675fe_rectangle"
+        android:gravity="center"
+        android:text="立即打卡"
+        android:textColor="#ffffffff"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_reissueCardNum"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="剩余次数：4"
+        android:textColor="#ff666666"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_punchCardTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="有效打卡时段：00:00:00- 23:59:59"
+        android:textColor="#ff999999"
+        android:textSize="12sp" />
+</LinearLayout>

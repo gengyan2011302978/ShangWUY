@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/dialog_white_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_titile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:text="提现规则"
+                android:textColor="@color/color_333333"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="left"
+                android:lineSpacingExtra="3dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:text="规则，是运行、运作规律所遵循的法则。规则，一般指由群众共同制定、公认或由代表人统一制定并通过的，由群体里的所有成员一起遵守的条例和章程。它存在三种形式：明规则、潜规则、元规则，无论何种规则只要违背善恶的道德必须严惩不贷以维护世间和谐；明规则是有明文规定的规则，存在需要不断完善的局限"
+                android:textColor="@color/color666666"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/ic_cancle"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/close_dialog" />
+
+</LinearLayout>

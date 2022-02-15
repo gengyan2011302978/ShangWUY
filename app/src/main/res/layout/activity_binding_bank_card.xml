@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/binding_card_title"
+        layout="@layout/layout_title_common" />
+
+    <View
+        android:id="@+id/add_card_bg"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_binding_bank_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/binding_card_title" />
+
+    <TextView
+        android:id="@+id/tv_add_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/add_card"
+        android:drawablePadding="7.5dp"
+        android:padding="10dp"
+        android:text="添加银行卡"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/add_card_bg"
+        app:layout_constraintEnd_toEndOf="@+id/add_card_bg"
+        app:layout_constraintStart_toStartOf="@+id/add_card_bg"
+        app:layout_constraintTop_toTopOf="@+id/add_card_bg" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/empty_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="add_card_bg,tv_add_card"
+        tools:visibility="visible" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_card"
+        android:layout_width="330dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:visibility="invisible"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/binding_card_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/color_666666"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="刘景瑞" />
+
+            <TextView
+                android:id="@+id/tv_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/color_333333"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:text="浦发银行" />
+
+            <TextView
+                android:id="@+id/tv_card_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/color_666666"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_bank"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bank"
+                tools:text="**** **** **** **** 2322" />
+
+            <com.phjt.view.roundView.RoundTextView
+                android:id="@+id/tv_edit"
+                android:layout_width="60.5dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rv_backgroundColor="@color/color_4C7CFB"
+                app:rv_cornerRadius="14dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="add_card_bg,cv_card" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="22dp"
+        android:lineSpacingExtra="3dp"
+        android:text="@string/binding_bank_tip"
+        android:textColor="@color/color_666666"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />
+</androidx.constraintlayout.widget.ConstraintLayout>

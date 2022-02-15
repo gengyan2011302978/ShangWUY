@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_download_video"
+        android:layout_marginTop="8dp"
+        android:layout_above="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"></androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:id="@+id/tv_delete"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="删除"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginBottom="36dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_2076ff_rectangle"
+        android:gravity="center"
+        />
+</RelativeLayout>

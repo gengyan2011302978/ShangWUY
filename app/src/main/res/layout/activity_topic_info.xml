@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#50827462"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/iv_top_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="26dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_common_back"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                android:padding="4dp"
+                android:src="@drawable/back_white"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:paddingEnd="10dp"
+                android:text="编辑"
+                android:textColor="@color/colorFFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tv_share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/share_white"
+                android:textColor="@color/colorFFFFFF"
+                android:textSize="16sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_topictitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16.5dp"
+            android:textColor="#ffffffff"
+            android:textSize="20sp"
+            tools:text="#话题标题" />
+
+        <TextView
+            android:id="@+id/tv_topicdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15.5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15.5dp"
+            android:ellipsize="end"
+            android:enabled="true"
+            android:maxLines="2"
+            android:textColor="#ffffffff"
+            android:textSize="14sp"
+            tools:text="话题内容" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp">
+
+            <ImageView
+                android:id="@+id/iv_person"
+                android:layout_width="67dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="19dp"
+                android:background="@drawable/topic_person_bg" />
+
+            <com.phjt.view.roundImg.RoundedImageView
+                android:id="@+id/iv_mine_head_pic"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="15.5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/iv_mine_avatar"
+                android:scaleType="centerCrop"
+                app:riv_oval="true" />
+
+            <ImageView
+                android:id="@+id/iv_vip"
+                android:layout_width="16dp"
+                android:layout_height="8.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/ic_vip" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="18dp"
+                android:text="300条动态"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_ffffff_bottom_rectangle"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relat_local_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17.5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/local_url_icon" />
+
+                <TextView
+                    android:id="@+id/tv_local_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="37.5dp"
+                    android:text="戳此进入《中国思维看经济》"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="15.5dp"
+                    android:background="@drawable/btn_right_next" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relat_local_tow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17.5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/local_url_icon" />
+
+                <TextView
+                    android:id="@+id/tv_local_tow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="37.5dp"
+                    android:text="戳此进入《中国思维看经济》"
+                    android:textColor="#ff333333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="15.5dp"
+                    android:background="@drawable/btn_right_next" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_line"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/color_F5F5F5" />
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/stl_topic"
+                android:layout_width="110dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                app:tl_indicator_color="@color/color_2673FE"
+                app:tl_indicator_corner_radius="1dp"
+                app:tl_indicator_height="3dp"
+                app:tl_indicator_width="20dp"
+                app:tl_tab_space_equal="true"
+                app:tl_textSelectColor="@color/color_2673FE"
+                app:tl_textSelectsize="18sp"
+                app:tl_textUnselectColor="@color/color_999999"
+                app:tl_textsize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color_DEDEDE" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_topic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_join"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/join_topic_icon" />
+
+    <include
+        android:id="@+id/no_network_layout"
+        layout="@layout/no_network_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

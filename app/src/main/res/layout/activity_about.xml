@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <include
+        android:id="@+id/include10"
+        layout="@layout/layout_title_common" />
+
+    <ImageView
+        android:id="@+id/iv_wechat_service"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/include10"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="19.5dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_wechat_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_wechat_service"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:minHeight="20dp"
+        android:text="@string/my_app_name"
+        android:textColor="@color/color_333333"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_wechat_service"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/tv_wechat_service"
+        android:layout_marginTop="30dp"
+        android:background="#F7F7F7" />
+
+    <FrameLayout
+        android:id="@+id/fl_about_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/view_wechat_service"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minHeight="18dp"
+            android:text="在线客服"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_wxcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="90dp"
+            android:minHeight="16dp"
+            android:text="@string/puhua_wechat"
+            android:visibility="gone"
+            android:textColor="@color/color_999999"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_copy_wechat"
+            android:layout_width="58dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/shape_bg_copy"
+            android:gravity="center"
+            android:text="复制"
+            android:visibility="gone"
+            android:textColor="#2172FF"
+            android:textSize="13sp" />
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="11dp"
+            android:src="@drawable/iv_mine_arrow"
+            android:visibility="visible" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="#fff7f7f7" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_about_mailbox"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@+id/fl_about_wechat"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:minHeight="18dp"
+            android:text="邮箱"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="90dp"
+            android:minHeight="16dp"
+            android:text="@string/puhua_mailbox"
+            android:textColor="@color/color_999999"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_copy_mailbox"
+            android:layout_width="58dp"
+            android:layout_height="23dp"
+            android:layout_gravity="center_vertical|end"
+            android:background="@drawable/shape_bg_copy"
+            android:gravity="center"
+            android:text="复制"
+            android:textColor="#2172FF"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="#fff7f7f7" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_customization_plans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl_about_mailbox"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:gravity="center"
+        android:text="联系班主任，定制私人学习计划"
+        android:textColor="@color/color_FF666666"
+        android:textSize="15sp" />
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        android:layout_width="114dp"
+        android:layout_height="114dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_about"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_below="@+id/tv_customization_plans"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_qr_code"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:gravity="center"
+        android:text="@string/mine_favourable"
+        android:textColor="@color/color_FF666666"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/tv_about_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+       android:layout_toStartOf="@+id/tv_explains"
+        android:layout_marginBottom="44dp"
+        android:gravity="center_horizontal"
+        android:text="@string/terms_and_privacy_policy"
+        android:textColor="@color/color_2673FE"
+        android:textSize="12sp"
+        android:visibility="visible" />
+    <TextView
+        android:id="@+id/tv_explains"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44dp"
+        android:gravity="center_horizontal"
+        android:text="和"
+        android:textColor="@color/color666666"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@+id/tv_explains"
+        android:layout_marginBottom="44dp"
+        android:gravity="center_horizontal"
+        android:text="@string/terms_and_privacy"
+        android:textColor="@color/color_2673FE"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="普华众鑫教育科技（北京）有限公司 版权所有"
+        android:textColor="@color/color_AAAAAA"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

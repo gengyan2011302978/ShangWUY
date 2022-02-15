@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_title_common" />
+
+    <ImageView
+        android:id="@+id/iv_bg_top"
+        android:layout_width="345dp"
+        android:layout_height="163dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_wallet_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_title" />
+
+    <TextView
+        android:id="@+id/withdrawal_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="邀请累计获得BOCC"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bg_top"
+        app:layout_constraintStart_toStartOf="@+id/iv_bg_top"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_top" />
+
+    <TextView
+        android:id="@+id/tv_withdrawal_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/withdrawal_amount"
+        app:layout_constraintStart_toStartOf="@+id/withdrawal_amount"
+        app:layout_constraintTop_toBottomOf="@+id/withdrawal_amount"
+        tools:text="¥56,625" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_apply_withdrawal"
+        android:layout_width="144dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="21dp"
+        android:gravity="center"
+        android:text="申请兑换"
+
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_bg_top"
+        app:layout_constraintEnd_toEndOf="@+id/tv_withdrawal_amount"
+        app:layout_constraintStart_toStartOf="@+id/tv_withdrawal_amount"
+        app:rv_cornerRadius="20dp"
+        app:rv_strokeColor="@color/white"
+        app:rv_strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/tv_withdrawal_rule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:drawableEnd="@drawable/wallet_rule"
+        android:drawablePadding="5.5dp"
+        android:padding="6dp"
+        android:text="兑换规则"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_bg_top"
+        app:layout_constraintTop_toTopOf="@+id/iv_bg_top" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tab_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_bg_top"
+        app:tl_indicator_color="@color/color_4171FC"
+        app:tl_indicator_height="0dp"
+        app:tl_textBold="BOTH"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/color_4171FC"
+        app:tl_textUnselectColor="@color/color_333333"
+        app:tl_textsize="15sp" />
+
+    <View
+        android:id="@+id/line_wallet"
+        style="@style/line_EFEFEF"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab_wallet" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_wallet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_wallet" />
+</androidx.constraintlayout.widget.ConstraintLayout>

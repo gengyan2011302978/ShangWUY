@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="167dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="兑换日期：2020-10-01"
+        android:textColor="#ff666666"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:layout_width="167dp"
+        android:layout_height="122dp">
+
+        <com.phjt.view.roundImg.RoundedImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="167dp"
+            android:layout_height="122dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/passageway_icon"
+            app:riv_corner_radius="4dp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="41dp"
+            android:layout_height="18dp"
+            android:text="有效"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="27dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_5e0000_rectangle"
+            android:gravity="center"
+            android:text="有效期至：2020-12-05"
+            android:textColor="#ffffffff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginBottom="10dp"
+        android:text="基金从业必1231312312312312312321111111113123213考训练营"
+        android:textColor="#666666"
+        android:textSize="16sp" />
+
+</LinearLayout>

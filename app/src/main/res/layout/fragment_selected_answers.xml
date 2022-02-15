@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FFF5F5F5">
+
+    <include
+        android:id="@+id/screen_include"
+        layout="@layout/layout_screen_head"
+        android:visibility="gone" />
+
+    <com.phjt.shangxueyuan.widgets.SortSelectView
+        android:id="@+id/view_short"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/color_white"
+        android:paddingStart="20dp"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/screen_include"
+        app:likeDownClickId="1"
+        app:likeName="点赞"
+        app:likeUpClickId="2"
+        app:timeDownClickId="1"
+        app:timeName="时间"
+        app:timeUpClickId="2" />
+
+    <View
+        android:id="@+id/view_my_consultation_data"
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/dp_121"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_my_consultation_reply"
+        android:layout_width="20dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="46dp"
+        app:layout_constraintEnd_toStartOf="@+id/view_my_consultation_data"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_selected_answers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_short">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_selected_answers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

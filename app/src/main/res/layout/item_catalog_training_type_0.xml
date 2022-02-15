@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_catalog_0"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_catalog_0_title_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10.5dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="10.5dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_catalog_0_time_item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="这就是金融的秘密是不是是是不是还是不这就是金融的秘密是不是是是不是还是不" />
+
+    <TextView
+        android:id="@+id/tv_catalog_0_time_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/color666666"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_catalog_0_title_item"
+        app:layout_constraintEnd_toStartOf="@+id/iv_catalog_0_item"
+        app:layout_constraintStart_toEndOf="@+id/tv_catalog_0_title_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_catalog_0_title_item"
+        tools:text="8月11日 20:00"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_catalog_0_item"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/arrow_catalog_down"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_catalog_0_title_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_catalog_0_title_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

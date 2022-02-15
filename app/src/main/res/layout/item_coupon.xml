@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="137.5dp"
+    android:background="@drawable/coupon_item_bg"
+    android:paddingStart="15dp"
+    android:paddingTop="14dp"
+    android:paddingEnd="15dp"
+    android:paddingBottom="14dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <TextView
+        android:id="@+id/tv_coupon_rule_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/color_B57D45"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/guide_line1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="满1000可用" />
+
+    <TextView
+        android:id="@+id/tv_rmb_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="2dp"
+        android:text="¥"
+        android:textColor="@color/color_F2242D"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_coupon_discount_item"
+        app:layout_constraintEnd_toStartOf="@+id/tv_coupon_discount_item"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_coupon_discount_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/color_F2242D"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_discount_item"
+        app:layout_constraintStart_toEndOf="@+id/tv_rmb_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_coupon_rule_item"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/tv_discount_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="2dp"
+        android:text="折"
+        android:textColor="@color/color_F2242D"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_coupon_discount_item"
+        app:layout_constraintEnd_toEndOf="@id/guide_line1"
+        app:layout_constraintStart_toEndOf="@+id/tv_coupon_discount_item"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_coupon_title_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textColor="@color/color_B57D45"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guide_line1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="优惠标题最多10个汉字" />
+
+    <TextView
+        android:id="@+id/tv_validity_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/color_B57D45"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_coupon_title_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_coupon_title_item"
+        tools:text="有效期至 2020.09.11 23:59" />
+
+    <TextView
+        android:id="@+id/tv_instructions_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:drawableEnd="@drawable/coupon_arrow_right"
+        android:drawablePadding="2dp"
+        android:text="使用说明"
+        android:textColor="@color/color_B57D45"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_validity_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_validity_item" />
+
+    <ImageView
+        android:id="@+id/iv_coupon_state_item"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:padding="5dp"
+        android:src="@drawable/selector_coupon_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_lose_efficacy"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_lose_efficacy"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/iv_to_use_item"
+        android:layout_width="65.5dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/banner_to_use_bg"
+        android:gravity="center"
+        android:text="去使用"
+        android:textColor="@color/color_white"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/view_gray"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_66FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

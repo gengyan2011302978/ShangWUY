@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="96dp"
+            android:layout_height="71dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_hot_bg"
+                android:layout_width="96dp"
+                android:layout_height="71dp"
+                android:background="@drawable/hot_fist_bg" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28.5dp"
+                android:layout_marginTop="22dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_hot_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOP 1"
+                    android:textColor="#ffd2733d"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_hot_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="本周上新"
+                    android:textColor="#ffd2733d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_week_new"
+                    android:layout_width="25.5dp"
+                    android:layout_height="15.5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="3dp"
+                    android:background="@drawable/ic_week_new" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#ff333333"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="基金从业必1231312312312312312321111111113123213考训练营" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="普华商学院"
+                    android:textColor="#ffa8a8a8"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#ff999999"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:text="3天掌握10大考点考试…" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_course_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="11dp"
+                    android:background="@drawable/bg_f7f7f7_rectangle"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="3dp"
+                    android:text="精品试听"
+                    android:textColor="#FF854306"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_course_typet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@+id/tv_course_type"
+                    android:background="@drawable/bg_f7f7f7_rectangle"
+                    android:gravity="center"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="3dp"
+                    android:text="精品试听"
+                    android:textColor="@color/color666666"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/ic_eye_look"
+                    android:drawablePadding="2.5dp"
+                    android:textColor="#ffa8a8a8"
+                    android:textSize="13sp"
+                    tools:text="263人在学" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/color_efefef" />
+</LinearLayout>

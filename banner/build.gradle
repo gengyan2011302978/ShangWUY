@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin:'maven'
+version = "1.4.10"
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode 41
+        versionName version
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+}
+
+uploadArchives { //Android Studio gradle 支持maven插件，所以可以添加此task
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            repository(url: 'http://127.0.0.1:8081/repository/maven-releases/') {
+                authentication(userName: 'admin', password: 'gy`123456')
+            }
+            pom.project {
+                version '1.0.0' //版本名称
+                artifactId 'banner'
+                groupId 'com.phjt.shangwuyou'
+                packaging 'aar' //填写aar
+                description 'update version 1.0.0 add new method' //更新描述
+            }
+        }
+    }
+}
+
+
+

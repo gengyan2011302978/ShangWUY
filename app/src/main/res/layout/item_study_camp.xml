@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_audition_item"
+        android:layout_width="160dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12.5dp"
+        android:layout_marginBottom="12.5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="4dp"
+        tools:src="@drawable/bg_senior_course" />
+
+    <ImageView
+        android:id="@+id/iv_alread_join"
+        android:layout_width="38dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/icon_alread_join"
+        app:layout_constraintStart_toEndOf="@+id/iv_audition_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_audition_title_item" />
+
+    <TextView
+        android:id="@+id/tv_audition_title_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="14dp"
+        android:ellipsize="end"
+        android:layout_marginStart="14dp"
+        android:maxLines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_audition_item"
+        app:layout_constraintTop_toTopOf="@+id/iv_audition_item"
+        tools:text="普华集团搬家啦" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="14dp"
+        android:text="上课时间："
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_audition_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_title_item" />
+
+    <TextView
+        android:id="@+id/tv_audition_content_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="14dp"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_audition_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_title_item"
+        tools:text="适合想要简单学习，进行日常充实学习的同学" />
+
+    <TextView
+        android:id="@+id/tv_study_people_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="共 "
+        android:textColor="@color/color_979797"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tv_audition_content_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_content_item" />
+
+    <TextView
+        android:id="@+id/tv_study_tasks_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13.5dp"
+        android:textColor="@color/color_FF650C"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_audition_content_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_content_item"
+        tools:text="286" />
+
+    <TextView
+        android:id="@+id/tv_study_tasks_number_s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/mine_task"
+        android:textColor="@color/color_979797"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_study_tasks_number"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_content_item" />
+
+    <TextView
+        android:id="@+id/tv_student_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="18dp"
+        android:textColor="@color/color_979797"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_content_item"
+        tools:text="6个学员报名" />
+
+    <TextView
+        android:id="@+id/tv_recent_watch_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:textColor="@color/color_979797"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/tv_study_people_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_study_people_item"
+        tools:text="最后观看时间：2020-01-13 15:22" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="43.5dp"
+        android:layout_height="18.5dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="16.5dp"
+        android:background="@drawable/bg_f650c_rectangle"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="报名中" />
+
+    <RelativeLayout
+        android:id="@+id/rl_undulate"
+        android:layout_width="60dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="16.5dp"
+        android:background="@drawable/bg_03d0af_rectangle"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_undulate"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/audition_animation" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:text="进行中"
+            android:textColor="@color/color_white"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/view_time"
+        android:layout_width="160dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="13.4dp"
+        android:background="@drawable/bg_shape_transparent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="@dimen/dp_18"
+        android:paddingLeft="7.5dp"
+        android:paddingRight="7.5dp"
+        android:textColor="@color/color_white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="2021.04.12-2021.05.12" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="273dp"
+    android:layout_height="360dp"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/update_top_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="30dp"
+                android:text="熵吾优版本更新"
+                android:textColor="#ffffffff"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/app_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="7.5dp"
+                android:text="V1.2.0"
+                android:textColor="#ffffffff"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_ffffff_rectangle"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:text="更新内容"
+                android:textColor="#ff333333"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="10dp"
+                android:layout_toRightOf="@+id/text"
+                android:background="@drawable/new_update_icon" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scroll_content"
+            android:layout_below="@+id/relat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="55dp">
+
+            <TextView
+                android:id="@+id/tv_update_communt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="18dp"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textColor="#ff7c7c7c"
+                android:textSize="14sp" />
+        </ScrollView>
+
+        <Button
+            android:id="@+id/iv_gengxin"
+            android:layout_width="224dp"
+            android:layout_height="31dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/appupdate_bottom_btton_bg"
+            android:gravity="center"
+            android:text="更新版本"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</LinearLayout>

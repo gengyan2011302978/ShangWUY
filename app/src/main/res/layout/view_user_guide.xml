@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relat_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/ll_icons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="255dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_master"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/boutique_icon_cover"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/iv_practice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/authority_icon_cover"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/view_guide_three"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/view_guide_three"
+            android:visibility="invisible" />
+        <ImageView
+            android:id="@+id/view_guide_four"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/view_guide_four"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_iconst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="330dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_boc_course"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/boc_course_icon_cover"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_live_playback"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/live_playback_icon_cover"
+            android:drawablePadding="0dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_digital_economy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/digital_economy_icon_cover"
+            android:drawablePadding="0dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_passageway"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/passageway_icon_cover"
+            android:drawablePadding="0dp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_master_top"
+        android:layout_width="188dp"
+        android:layout_height="81dp"
+        android:layout_marginLeft="145dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/authority_bg"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_practice_top"
+        android:layout_width="182dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="93dp"
+        android:background="@drawable/ic_practice_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_project_top"
+        android:layout_width="210dp"
+        android:layout_height="83dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="183dp"
+        android:background="@drawable/ic_project_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_live_playback_top"
+        android:layout_width="177dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="340dp"
+        android:background="@drawable/ic_live_playback_top"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/iv_number"
+        android:layout_width="220dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="440dp"
+        android:background="@drawable/view_guide_number"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/iv_goal"
+        android:layout_width="126dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/view_guide_goal"
+        android:visibility="gone" />
+    <ImageView
+        android:id="@+id/iv_china"
+        android:layout_width="162dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="400dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/view_guide_china"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_information_operations_officer"
+        android:layout_width="112dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/ic_information_operations_officer"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_information_operations_officer_top"
+        android:layout_width="184dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/ic_information_operations_officer_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_architect"
+        android:layout_width="102dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="215dp"
+        android:layout_marginTop="78dp"
+        android:background="@drawable/ic_architect"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_architect_top"
+        android:layout_width="180dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/ic_architect_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_passageway_top"
+        android:layout_width="231dp"
+        android:layout_height="129dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/ic_passageway_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_digital_top"
+        android:layout_width="210dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="92dp"
+        android:background="@drawable/ic_digital_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_study_top"
+        android:layout_width="169dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/ic_bottom_study_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_study"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/ic_bottom_study"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_circle_top"
+        android:layout_width="131dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="114.5dp"
+        android:layout_marginBottom="14.5dp"
+        android:background="@drawable/ic_bottom_circle_top"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/ic_bottom_circle"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_elite_top"
+        android:layout_width="189dp"
+        android:layout_height="122dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/ic_bottom_elite_top" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_elite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/ic_bottom_elite" />
+
+    <ImageView
+        android:id="@+id/iv_i_know"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/ic_i_know" />
+
+</RelativeLayout>

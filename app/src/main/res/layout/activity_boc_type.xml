@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="262dp"
+        android:background="@drawable/boc_primary_bg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_boc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BOC商科"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_boc_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.phjt.view.roundView.RoundTextView
+                android:id="@+id/type_bg"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rv_backgroundColor="@color/color_E6ffffff"
+                app:rv_cornerRadius="10dp" />
+
+            <ImageView
+                android:id="@+id/iv_primary"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/boc_primary"
+                app:layout_constraintBottom_toBottomOf="@+id/type_bg"
+                app:layout_constraintEnd_toStartOf="@+id/iv_middle"
+                app:layout_constraintStart_toStartOf="@+id/type_bg"
+                app:layout_constraintTop_toTopOf="@+id/type_bg" />
+
+            <ImageView
+                android:id="@+id/iv_middle"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/boc_middle"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_primary"
+                app:layout_constraintEnd_toStartOf="@+id/iv_high"
+                app:layout_constraintStart_toEndOf="@+id/iv_primary"
+                app:layout_constraintTop_toTopOf="@+id/iv_primary" />
+
+            <ImageView
+                android:id="@+id/iv_high"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/boc_high"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_middle"
+                app:layout_constraintEnd_toEndOf="@+id/type_bg"
+                app:layout_constraintStart_toEndOf="@+id/iv_middle"
+                app:layout_constraintTop_toTopOf="@+id/iv_middle" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:minHeight="400dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp"
+                app:layout_constraintTop_toBottomOf="@+id/type_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_label"
+                        android:layout_width="150dp"
+                        android:layout_height="54.5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/boc_primary_label" />
+
+                    <TextView
+                        android:id="@+id/tv_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="8dp"
+                        android:lineSpacingExtra="4dp"
+                        android:textColor="@color/color_B9B9B9"
+                        android:textSize="14sp"
+                        tools:text="从企业运营整体角度切入，让学习者初步了解九大体系的运营概况及团队搭建情况，循序渐进传递企业运营核心理念。在系统概念的强力支撑下，逐步引导学习者清楚了解影响企业发展的关键要素，并建立起与之对应的个人定位。是学习者面对就业、创业问题的王牌保障" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_progress"
+                        android:layout_width="match_parent"
+                        android:layout_height="109dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/boc_primary_progress_bg">
+
+                        <ImageView
+                            android:id="@+id/iv_progress_icon"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="38dp"
+                            android:layout_marginTop="31dp"
+                            android:src="@drawable/boc_primary_progress"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="9dp"
+                            android:text="课程学习进度"
+                            android:textColor="@color/color_333333"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/iv_progress_icon"
+                            app:layout_constraintStart_toEndOf="@+id/iv_progress_icon"
+                            app:layout_constraintTop_toTopOf="@+id/iv_progress_icon" />
+
+                        <TextView
+                            android:id="@+id/tv_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="43.5dp"
+                            android:textColor="@color/color_333333"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/iv_progress_icon"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/iv_progress_icon"
+                            tools:text="50%" />
+
+                        <com.phjt.shangxueyuan.widgets.MyProgressView
+                            android:id="@+id/mPv"
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp"
+                            android:layout_marginStart="38dp"
+                            android:layout_marginTop="67dp"
+                            android:layout_marginEnd="43.5dp"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.phjt.view.roundView.RoundTextView
+                        android:id="@+id/tv_study_in"
+                        android:layout_width="325dp"
+                        android:layout_height="49dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="27.5dp"
+                        android:gravity="center"
+                        android:text="进入学习"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        app:rv_backgroundColor="@color/color_FEBB32"
+                        app:rv_cornerRadius="24dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.phjt.view.roundView.RoundLinearLayout
+                android:id="@+id/ll_watch_continue"
+                android:layout_width="308dp"
+                android:layout_height="40.5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="11dp"
+                android:paddingEnd="11dp"
+                app:layout_constraintEnd_toEndOf="@+id/cv_bg"
+                app:layout_constraintStart_toStartOf="@+id/cv_bg"
+                app:layout_constraintTop_toBottomOf="@+id/cv_bg"
+                app:rv_backgroundColor="@color/color_FFF6E5"
+                app:rv_cornerRadius_BL="8dp"
+                app:rv_cornerRadius_BR="8dp"
+                app:rv_strokeWidth="1dp">
+
+                <TextView
+                    android:id="@+id/tv_course_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/color_666666"
+                    android:textSize="13sp"
+                    tools:text="上次观看：普华集团最厉害的授是？" />
+
+                <TextView
+                    android:id="@+id/tv_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="继续观看>"
+                    android:textColor="@color/color_FF9A65"
+                    android:textSize="13sp" />
+            </com.phjt.view.roundView.RoundLinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

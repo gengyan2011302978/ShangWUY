@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <include
+        android:id="@+id/cl_common_title"
+        layout="@layout/layout_title_common" />
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/stl_agent"
+        android:layout_width="270dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="@dimen/dp_18"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_common_title"
+        app:tl_indicator_color="@color/color_white"
+        app:tl_indicator_corner_radius="1dp"
+        app:tl_indicator_height="3dp"
+        app:tl_indicator_width="16dp"
+        app:tl_tab_space_equal="true"
+        app:tl_textBold="SELECT"
+        app:tl_textSelectColor="@color/color_white"
+        app:tl_textUnselectColor="@color/color_white"
+        app:tl_textsize="15sp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="36dp" />
+
+    <FrameLayout
+        android:id="@+id/cl_type"
+        android:layout_width="@dimen/dp_275"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_common_title">
+
+        <TextView
+            android:id="@+id/tv_direct_invitation"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_ask_questions_left"
+            android:gravity="center"
+            android:text="直属邀请"
+            android:textColor="@color/color_white"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tv_lower_agent"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dp_134"
+            android:background="@drawable/bg_ask_questions_right"
+            android:gravity="center"
+            android:text="下级代理商"
+            android:textColor="@color/color_FF333333"
+            android:textSize="14sp" />
+
+        <View
+            android:id="@+id/view_ask_questions"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="134dp"
+            android:background="@drawable/bg_ask_questions" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_agent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        app:layout_constraintTop_toBottomOf="@+id/stl_agent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_agent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_agent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

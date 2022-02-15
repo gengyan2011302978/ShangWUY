@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_title_common" />
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_info_avatar"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="55dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_mine_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tv_info_avatar_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="12dp"
+        android:text="点击更换头像"
+        android:textColor="@color/color_4C7CFB"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_info_avatar" />
+
+    <View
+        android:id="@+id/view_avatar_label"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="21dp"
+        android:background="@color/color_FAF7F8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info_avatar_label" />
+
+    <FrameLayout
+        android:id="@+id/fl_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_avatar_label">
+
+        <TextView
+            android:id="@+id/tv_nick_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="昵称"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_nick_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:gravity="end"
+            android:hint="请输入昵称"
+            android:maxLines="1"
+            android:minWidth="40dp"
+            android:textColor="@color/color999999"
+            android:textColorHint="@color/color999999"
+            android:textCursorDrawable="@drawable/shape_cursor_color"
+            android:textSize="16sp"
+            tools:text="180***3354vvv" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/color_FAF7F8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_nick_name" />
+
+    <FrameLayout
+        android:id="@+id/fl_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_info_name">
+
+        <TextView
+            android:id="@+id/tv_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="姓名"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:gravity="end"
+            android:maxLines="1"
+            android:minWidth="40dp"
+            android:textColor="@color/color999999"
+            android:textColorHint="@color/color999999"
+            android:textCursorDrawable="@drawable/shape_cursor_color"
+            android:textSize="16sp"
+            tools:text="180**" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_full_name"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/color_FAF7F8"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_full_name" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_sex_label"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_full_name">
+
+        <TextView
+            android:id="@+id/tv_info_sex_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="性别"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_info_sex_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="30dp"
+            android:gravity="end"
+            android:textColor="@color/color999999"
+            android:textSize="16sp"
+            tools:text="男" />
+
+        <ImageView
+            android:id="@+id/iv_arrows_sex"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="11dp"
+            android:src="@drawable/iv_mine_arrow"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_sex_label"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/color_FAF7F8"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fl_sex_label" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_sex_label">
+
+        <TextView
+            android:id="@+id/tv_info_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="24dp"
+            android:text="手机号"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_info_date_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/color999999"
+            android:textSize="16sp"
+            tools:text="180**225" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

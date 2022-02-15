@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_answer_title_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_answer_icon"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="29dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_answer_title_item"
+        app:riv_oval="true" />
+
+    <TextView
+        android:id="@+id/tv_answer_name_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxEms="7"
+        android:text="王晓飞王晓飞王晓飞王晓飞"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_answer_icon"
+        app:layout_constraintTop_toTopOf="@+id/iv_answer_icon" />
+
+    <TextView
+        android:id="@+id/tv_public_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="公开展示"
+        android:textColor="@color/color_387BFE"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_answer_name_item"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_look_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="查看解析"
+        android:textColor="@color/color_387BFE"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_public_display"
+        app:layout_constraintEnd_toStartOf="@+id/tv_public_display" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_answer_analysis_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_public_display"
+        app:layout_constraintStart_toStartOf="@+id/tv_answer_name_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_answer_name_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_answer_analysist_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/tv_public_display"
+        app:layout_constraintStart_toStartOf="@+id/tv_answer_name_item"
+        app:layout_constraintTop_toBottomOf="@+id/rv_answer_analysis_item" />
+
+    <TextView
+        android:id="@+id/tv_answer_chose_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginEnd="25dp"
+        android:text="1.C"
+        android:textColor="@color/color_666666"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_answer_name_item"
+        app:layout_constraintTop_toBottomOf="@+id/rv_answer_analysist_item" />
+
+    <TextView
+        android:id="@+id/tv_time_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="2020-09-01 13:00"
+        android:textColor="@color/color_999999"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_answer_name_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_answer_chose_item" />
+
+    <TextView
+        android:id="@+id/tv_zan_count_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="134"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_time_item"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_zan_item"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="2dp"
+        android:src="@drawable/comment_zan_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_zan_count_item"
+        app:layout_constraintEnd_toStartOf="@+id/tv_zan_count_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_zan_count_item" />
+
+    <View
+        android:id="@+id/line_bottom_item"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/color_EEEEEE"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_item" />
+
+    <ImageView
+        android:id="@+id/iv_alread"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/icon_alread_exerciseed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

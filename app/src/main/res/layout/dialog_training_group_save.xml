@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_group_share_save"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="15.5dp"
+    android:paddingEnd="15.5dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+        android:id="@+id/iv_group_save_bg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_group_save_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_group_save_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="33dp"
+        android:gravity="center"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/color_FFD56F"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/iv_group_save_bg"
+        tools:text="加入课程交流群与小伙伴们分享知识, 还有机会获得限量礼物或优惠劵哦!" />
+
+    <TextView
+        android:id="@+id/tv_group_save_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="33dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_group_save_title"
+        tools:text="熵吾优商家学院交流群" />
+
+    <ImageView
+        android:id="@+id/iv_group_save_qrcode"
+        android:layout_width="153dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_group_save_desc"
+        tools:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:layout_width="290dp"
+        android:layout_height="89.5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_group_share_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_group_save_qrcode" />
+</androidx.constraintlayout.widget.ConstraintLayout>

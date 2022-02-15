@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F8F8F8">
+
+    <include
+        android:id="@+id/layout_do_exercise"
+        layout="@layout/layout_title_common" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_do_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toTopOf="@+id/tv_submit"
+        app:layout_constraintTop_toBottomOf="@+id/layout_do_exercise" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_submit"
+        android:layout_width="343dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="@string/exercise_submit"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_do_exercise"
+        app:rv_backgroundColor="@color/color_387BFE"
+        app:rv_cornerRadius="22dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

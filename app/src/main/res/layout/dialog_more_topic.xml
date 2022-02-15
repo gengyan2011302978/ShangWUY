@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_white_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_top"
+            android:layout_width="11dp"
+            android:layout_height="11.5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/top_topic_icon"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_top"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="9dp"
+            android:gravity="center"
+            android:text="动态置顶"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_FFF2F2F2" />
+
+    <LinearLayout
+        android:id="@+id/linear_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="11dp"
+            android:layout_height="11.5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/delete_topic_icon"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="9dp"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

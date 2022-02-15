@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginEnd="6.5dp"
+    android:layout_marginBottom="2dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="9dp"
+        android:paddingTop="11dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="11dp">
+
+        <com.phjt.view.roundImg.RoundedImageView
+            android:id="@+id/iv_commodity_item"
+            android:layout_width="105dp"
+            android:layout_height="77dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="6dp"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tv_commodity_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_commodity_item"
+            app:layout_constraintTop_toTopOf="@+id/iv_commodity_item"
+            tools:text="商业模式思维" />
+
+        <TextView
+            android:id="@+id/tv_commodity_des"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color666666"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_commodity_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_commodity_title"
+            tools:text="企业之间的竞争是商业模式的竞争" />
+
+        <TextView
+            android:id="@+id/tv_commodity_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.5dp"
+            android:textColor="@color/color_FF650C"
+            android:textSize="13.5sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_commodity_des"
+            app:layout_constraintTop_toBottomOf="@+id/tv_commodity_des"
+            tools:text="2330000学豆" />
+
+        <TextView
+            android:id="@+id/tv_exchange_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/color_979797"
+            android:textSize="13.5sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_commodity_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="286人已兑换" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:paddingBottom="44dp"
+    tools:background="@color/color_333333">
+
+    <ImageView
+        android:id="@+id/iv_close_dialog"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:src="@drawable/ic_group_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/iv_close_dialog">
+
+        <ImageView
+            android:id="@+id/iv_bg_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_group_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="19dp"
+            android:gravity="center"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/color_FFD56F"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/iv_bg_dialog"
+            tools:text="加入课程交流群与小伙伴们分享知识, 还有机会获得限量礼物或优惠劵哦!" />
+
+        <TextView
+            android:id="@+id/tv_group_name_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="19dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_dialog"
+            tools:text="熵吾优商家学院交流群" />
+
+        <ImageView
+            android:id="@+id/iv_group_qrcode_dialog"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginTop="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_group_name_dialog"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_group_des_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="保存二维码后使用微信扫一扫即可入群"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_group_qrcode_dialog" />
+
+        <com.phjt.view.roundView.RoundTextView
+            android:id="@+id/tv_save_qrcode"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@string/save_qrcode"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_group_des_dialog"
+            app:rv_backgroundColor="@color/white"
+            app:rv_cornerRadius="20dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

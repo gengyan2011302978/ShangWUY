@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relat_icon"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.phjt.view.roundImg.RoundedImageView
+            android:id="@+id/iv_audition_item"
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="4dp"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/bg_f650c_rectangle"
+            android:paddingLeft="5dp"
+            android:paddingTop="1dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="1dp"
+            android:text="直播中"
+            android:textColor="#ffffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18:00"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="7.5dp"
+            android:paddingRight="7.5dp"
+            android:background="@drawable/bg_61000000_rectangle"
+            android:textColor="#ffffffff"
+            android:textSize="10sp"
+            />
+        <TextView
+            android:id="@+id/tv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="18:00"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="7.5dp"
+            android:paddingRight="7.5dp"
+            android:background="@drawable/bg_61000000_rectangle"
+            android:textColor="#ffffffff"
+            android:textSize="10sp"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_audition_title_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="14dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relat_icon"
+        app:layout_constraintTop_toTopOf="@+id/relat_icon"
+        tools:text="普华集团搬家啦" />
+
+    <TextView
+        android:id="@+id/tv_live_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="14dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_audition_title_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_title_item"
+        tools:text="李晓东" />
+
+    <TextView
+        android:id="@+id/tv_live_commpany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="14dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_audition_title_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_audition_title_item"
+        tools:text="李晓东" />
+
+    <ImageView
+        android:id="@+id/iv_people"
+        android:layout_width="9.5dp"
+        android:layout_height="12dp"
+        android:background="@drawable/icon_people_number"
+        app:layout_constraintBottom_toBottomOf="@+id/relat_icon"
+        app:layout_constraintStart_toStartOf="@+id/tv_live_time" />
+
+    <TextView
+        android:id="@+id/tv_study_people_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:textColor="@color/color_979797"
+        android:textSize="13.5sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_people"
+        app:layout_constraintStart_toEndOf="@+id/iv_people"
+        app:layout_constraintTop_toTopOf="@+id/iv_people"
+        tools:text="286人在学" />
+
+    <TextView
+        android:id="@+id/tv_rate_of_learning"
+        android:layout_width="70dp"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_f7f7f7_rectangles"
+        android:gravity="center"
+        android:text="已学习80%"
+        android:textColor="@color/color_FF9A65"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_audition_title_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_study_people_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

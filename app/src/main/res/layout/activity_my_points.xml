@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_my_points_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_common_back"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="6dp"
+            android:padding="4dp"
+            android:src="@drawable/back_white" />
+
+        <TextView
+            android:id="@+id/tv_common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawableEnd="@drawable/ic_help_centre_white"
+            android:drawablePadding="2dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="我的积分"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_common_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="充值学豆"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_points_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学豆"
+            android:layout_alignParentRight="true"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOCC"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="15dp"
+            android:textColor="#ffffffff"
+            android:layout_alignParentRight="true"
+            android:textSize="32sp"
+            tools:text="38790" />
+
+        <TextView
+            android:id="@+id/tv_bocc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="15dp"
+            android:textColor="#ffffffff"
+            android:textSize="32sp"
+            tools:text="38790" />
+
+        <TextView
+            android:id="@+id/tv_exchange_now"
+            android:layout_width="98dp"
+            android:layout_height="35.5dp"
+            android:layout_below="@+id/tv_currency"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_ffffff_radius"
+            android:gravity="center"
+            android:text="兑换"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_points_detail"
+            android:layout_width="108dp"
+            android:layout_height="47dp"
+            android:layout_below="@+id/tv_exchange_now"
+            android:layout_marginTop="16.5dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_learn_info" />
+        <ImageView
+            android:id="@+id/iv_points_ranking_list"
+            android:layout_width="108dp"
+            android:layout_height="47dp"
+            android:layout_below="@+id/tv_exchange_now"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16.5dp"
+            android:background="@drawable/icon_learn_rank" />
+        <ImageView
+            android:id="@+id/iv_bocc_detail"
+            android:layout_width="108dp"
+            android:layout_height="47dp"
+            android:layout_below="@+id/tv_exchange_now"
+            android:layout_marginTop="16.5dp"
+            android:background="@drawable/icon_bocc_info" />
+
+        <TextView
+            android:id="@+id/tv_currency_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_points_detail"
+            android:layout_marginTop="25dp"
+            android:text="BOCC任务"
+            android:textStyle="bold"
+            android:textColor="#ff333333"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_currency_mall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_points_detail"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:text="商城 >"
+            android:textStyle="bold"
+            android:textColor="#ff2683ff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_points_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_points"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_points_detail" />
+
+    <View
+        android:id="@+id/view_points"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

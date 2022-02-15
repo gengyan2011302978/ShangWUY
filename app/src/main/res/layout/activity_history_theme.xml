@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/coupon_title"
+        layout="@layout/layout_title_common" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/coupon_title"
+        android:layout_marginBottom="72dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="13.5dp"
+                android:background="@color/colorEEEEEE" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                tools:text="数字经济课程打卡标题" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#ff666666"
+                android:textSize="13sp"
+                tools:text="2020-12-21" />
+
+            <TextView
+                android:id="@+id/tv_motif_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="#ff999999"
+                android:textSize="14sp"
+                tools:text="林志玲就将工作重心放在内地和香港。在这期间还有担任颁奖典礼嘉宾，真正在内地站稳脚步，就是在《赤壁》中塑造的小乔。虽然事业上发展的如火如荼，但是爱情方面历经坎坷。直到19年才收获属于自己的婚姻，而且两个人早在2011年因《赤壁~爱~》相识。自从结婚之后，林志玲就定居日本，很长时间没有出现在大家面前。" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginTop="11dp"
+                android:background="@color/color_F8F8F8" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="打卡日记"
+                    android:textColor="#ff333333"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="11dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/choose_list_icon" />
+
+                    <TextView
+                        android:id="@+id/tv_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="按时间"
+                        android:textColor="#ff666666"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tv_journal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_2675fe_rectangle"
+        android:gravity="center"
+        android:text="立即补打卡"
+        android:textColor="#ffffffff"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_reply_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_F7F7F7"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_reply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5.5dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="4.5dp"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_white_bg"
+            android:hint="评论"
+            android:maxLength="1000"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="@color/color_696868"
+            android:textColorHint="@color/color_B0B0B0"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_reply_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4.5dp"
+            android:layout_marginEnd="5.5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="发送"
+            android:textColor="@color/color_2673FE"
+            android:textSize="13sp" />
+    </LinearLayout>
+</RelativeLayout>

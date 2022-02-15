@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_comment_icon_item"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="15.5dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/tv_comment_phone_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17.5dp"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_comment_icon_item"
+        app:layout_constraintTop_toTopOf="@+id/iv_comment_icon_item"
+        tools:text="137***9314" />
+
+    <ImageView
+        android:id="@+id/iv_vip_item"
+        android:layout_width="23dp"
+        android:layout_height="12.5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_vip"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_comment_phone_item"
+        app:layout_constraintStart_toEndOf="@+id/tv_comment_phone_item"
+        app:layout_constraintTop_toTopOf="@+id/tv_comment_phone_item" />
+
+    <com.ctetin.expandabletextviewlibrary.ExpandableTextView
+        android:id="@+id/tv_comment_content_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.5dp"
+        android:layout_marginEnd="15.5dp"
+        android:lineSpacingExtra="1dp"
+        android:textColor="@color/color_696868"
+        android:textSize="15sp"
+        app:ep_need_always_showright="true"
+        app:ep_need_contract="true"
+        app:ep_need_expand="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_comment_phone_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comment_phone_item"
+        tools:text="金融原来是这个样子的呀？可能我之前学的都不叫金融，听了翟老师的课程才恍然大悟是的发生的发是的发生的。" />
+
+    <TextView
+        android:id="@+id/tv_comment_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="审核中"
+        android:textColor="#ff1374ff"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_comment_phone_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_comment_phone_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_comment_item"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_comment_phone_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_comment_content_item" />
+
+    <include
+        android:id="@+id/bottom_view"
+        layout="@layout/zan_comment_share_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/rv_comment_item" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:drawable="@drawable/ic_liveing_01" android:duration="100"/>
+    <item android:drawable="@drawable/ic_liveing_02" android:duration="100"/>
+    <item android:drawable="@drawable/ic_liveing_03" android:duration="100"/>
+    <item android:drawable="@drawable/ic_liveing_04" android:duration="100"/>
+    <item android:drawable="@drawable/ic_liveing_05" android:duration="100"/>
+    <item android:drawable="@drawable/ic_liveing_06" android:duration="100"/>
+    <item android:drawable="@drawable/ic_liveing_07" android:duration="100"/>
+    <item android:drawable="@drawable/ic_liveing_08" android:duration="100"/>
+
+</animation-list>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="14dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15.5dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="2dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tv_exercise_state"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="怎样看到2020年数字经济的发展林志玲就将工作重心。" />
+
+    <TextView
+        android:id="@+id/tv_exercise_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="16dp"
+        android:text="未提交"
+        android:textColor="@color/color_F25257"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_title"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_submit_answer_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="15dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_submit_answer_success"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/exercise_submit_answer_success"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_submit_answer_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="提交作业成功!"
+            android:textColor="@color/color_666666"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_submit_answer_success"
+            app:layout_constraintStart_toStartOf="@+id/iv_submit_answer_success"
+            app:layout_constraintTop_toBottomOf="@+id/iv_submit_answer_success" />
+
+        <TextView
+            android:id="@+id/relevant_course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15.5dp"
+            android:layout_marginTop="52dp"
+            android:text="相关课程"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_submit_answer_success" />
+
+        <TextView
+            android:id="@+id/tv_relevant_course"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12.5dp"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/relevant_course"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/relevant_course"
+            app:layout_constraintTop_toTopOf="@+id/relevant_course"
+            tools:text="2019独家揭秘数字经济红利" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

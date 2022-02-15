@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/order_title_layout"
+        layout="@layout/layout_title_common" />
+
+    <TextView
+        android:id="@+id/commodity_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="18dp"
+        android:text="商品信息"
+        android:textColor="@color/color_333333"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_title_layout" />
+
+    <TextView
+        android:id="@+id/tv_commodity_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="14dp"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxEms="12"
+        android:maxLines="1"
+        android:textColor="@color/color_000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_currency"
+        app:layout_constraintStart_toStartOf="@+id/commodity_info"
+        app:layout_constraintTop_toBottomOf="@+id/commodity_info"
+        tools:text="会员：VIP月卡" />
+
+    <TextView
+        android:id="@+id/tv_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_commodity_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="200学豆" />
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="11.5dp"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_currency" />
+
+    <EditText
+        android:id="@+id/et_commodity_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="3"
+        android:minWidth="26dp"
+        android:minHeight="24dp"
+        android:text="1"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/dimen_14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_add"
+        app:layout_constraintEnd_toStartOf="@+id/iv_add"
+        app:layout_constraintTop_toTopOf="@+id/iv_add" />
+
+    <ImageView
+        android:id="@+id/iv_reduce"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_reduce"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_add"
+        app:layout_constraintEnd_toStartOf="@+id/et_commodity_count"
+        app:layout_constraintTop_toTopOf="@+id/iv_add" />
+
+    <TextView
+        android:id="@+id/currency_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49.5dp"
+        android:text="总计消耗学豆"
+        android:textColor="@color/color_000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_commodity_info"
+        app:layout_constraintTop_toBottomOf="@+id/tv_commodity_info" />
+
+    <TextView
+        android:id="@+id/tv_currency_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:textColor="@color/color_000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/currency_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="9800学豆" />
+
+    <View
+        android:id="@+id/line_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_marginTop="41dp"
+        android:background="@color/color_FFF7F8FB"
+        app:layout_constraintTop_toBottomOf="@+id/currency_count" />
+
+    <TextView
+        android:id="@+id/tv_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:text="兑换方式"
+        android:textColor="@color/color_333333"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_view_1" />
+
+    <TextView
+        android:id="@+id/tv_exchange_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17.5dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_exchange"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange"
+        tools:text="9800学豆" />
+
+    <ImageView
+        android:id="@+id/iv_exchange_currency"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="9.5dp"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_iv_arguemnt_check"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_exchange_currency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_exchange_currency" />
+
+    <View
+        android:id="@+id/view_line2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="14dp"
+        android:background="@color/color_EAEAEA"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_currency" />
+
+    <TextView
+        android:id="@+id/tv_exchange_bocc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/view_line2"
+        app:layout_constraintTop_toBottomOf="@+id/view_line2"
+        tools:text="≈ 9800.021 BOCC" />
+
+    <ImageView
+        android:id="@+id/iv_exchange_bocc"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="9.5dp"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/login_iv_arguemnt_uncheck"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_exchange_bocc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_exchange_bocc" />
+
+    <View
+        android:id="@+id/view_line3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="14dp"
+        android:background="@color/color_EAEAEA"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_bocc" />
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="tv_exchange_bocc,iv_exchange_bocc,view_line3" />
+
+    <TextView
+        android:id="@+id/tv_refund_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="*商品兑换成功后，不可退款"
+        android:textColor="@color/color_C40D23"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/view_line3"
+        app:layout_constraintTop_toBottomOf="@+id/view_line3" />
+
+    <TextView
+        android:id="@+id/tv_exchange_proportion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="*当前学豆与BOCC兑换比例为1:0"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_refund_tip"
+        app:layout_constraintTop_toBottomOf="@+id/tv_refund_tip" />
+
+    <TextView
+        android:id="@+id/tv_exchange_proportion_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="*学豆与BOCC兑换比率有波动，请以兑换时的实际值为准"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_exchange_proportion"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_proportion" />
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="*1学豆=1元人民币"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_exchange_proportion_tip"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_proportion_tip" />
+
+    <TextView
+        android:id="@+id/exchange_confirm"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="18.5dp"
+        android:background="@drawable/bg_4071fc_rectangle"
+        android:gravity="center"
+        android:text="立即兑换"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

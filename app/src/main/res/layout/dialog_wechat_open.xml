@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="260dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_white_bg">
+
+    <TextView
+        android:id="@+id/tv_wechat_open_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="17dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:text="您未购买专栏课程\n请购买后继续学习"
+        android:textColor="@color/color_333333"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_wechat_open_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:visibility="gone"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="37dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3dp"
+        android:text="打开微信，即可在添加好友页面粘贴搜索"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wechat_open_title" />
+
+    <TextView
+        android:id="@+id/tv_wechat_open_cancel"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/shape_btn_cancel"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/color_999999"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_wechat_open"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wechat_open_content" />
+
+    <TextView
+        android:id="@+id/tv_wechat_open"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_btn_sure"
+        android:gravity="center"
+        android:text="购买"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_wechat_open_cancel"
+        app:layout_constraintTop_toTopOf="@+id/tv_wechat_open_cancel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

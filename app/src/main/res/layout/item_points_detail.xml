@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_15">
+
+    <TextView
+        android:id="@+id/tv_points_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="90dp"
+        android:enabled="true"
+        android:maxLines="1"
+        android:textColor="@color/color_FF333333"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="课程评论" />
+
+    <TextView
+        android:id="@+id/tv_points_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14.5dp"
+        android:layout_marginTop="9dp"
+        android:enabled="true"
+        android:maxLines="1"
+        android:text="每次可获得价值 "
+        android:textColor="@color/color_FF999999"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_points_detail_title" />
+
+    <TextView
+        android:id="@+id/tv_points_detail_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="2dp"
+        android:enabled="true"
+        android:maxLines="1"
+        android:textColor="@color/color_FF2683FF"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_points_detail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_points_detail_title"
+        tools:text="0.0056" />
+
+    <TextView
+        android:id="@+id/tv_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="2dp"
+        android:enabled="true"
+        android:maxLines="1"
+        android:text="元的BOCC"
+        android:textColor="@color/color_FF999999"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_points_detail_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_points_detail_title" />
+
+
+    <TextView
+        android:id="@+id/tv_points"
+        android:layout_width="65dp"
+        android:layout_height="23.5dp"
+        android:layout_marginStart="14.5dp"
+        android:layout_marginTop="15.5dp"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:background="@drawable/bg_not_available"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="未获得" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

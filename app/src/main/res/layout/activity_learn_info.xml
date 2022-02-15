@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/learn_info_topbg">
+        <ImageView
+            android:id="@+id/iv_common_back"
+            android:layout_width="30dp"
+            android:layout_height="44dp"
+            android:padding="4dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/back_white"
+            />
+
+        <TextView
+            android:id="@+id/tv_common_title"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="19sp"
+            tools:text="我的学豆" />
+
+        <TextView
+            android:id="@+id/tv_common_right"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="充值学豆"
+            />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_common_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="学豆"
+            android:textColor="#ffffffff"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="2341.854"
+            android:textColor="#ffffffff"
+            android:textSize="35sp"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/learn_info_commentbg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="7.5dp"
+                app:tl_divider_color="@color/color_FF2683FF"
+                app:tl_indicator_color="@color/color_FF2683FF"
+                app:tl_indicator_corner_radius="2dp"
+                app:tl_indicator_gravity="BOTTOM"
+                app:tl_indicator_height="4dp"
+                app:tl_indicator_style="NORMAL"
+                app:tl_indicator_width="10dp"
+                app:tl_tab_padding="7.5dp"
+                app:tl_tab_space_equal="false"
+                app:tl_textBold="SELECT"
+                app:tl_textSelectsize="21sp"
+                app:tl_textSelectColor="@color/color_FF2683FF"
+                app:tl_textUnselectColor="@color/color_333333"
+                app:tl_textsize="15sp" />
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

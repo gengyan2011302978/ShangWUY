@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/bg_ffffff_corners_3"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/tv_order_num_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_D3D3D3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="01" />
+
+    <TextView
+        android:id="@+id/tv_analysis_title_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_order_num_item"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="&#12288;&#12288;&#12288;&#8194;国际象棋起源于英国吗？" />
+
+    <com.phjt.view.roundView.RoundTextView
+        android:id="@+id/tv_tag_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="5dp"
+        android:paddingTop="1.5dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="1.5dp"
+        android:text="简答题"
+        android:textColor="@color/colorFFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_order_num_item"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rv_backgroundColor="@color/color_21B2AE"
+        app:rv_cornerRadius="2.5dp" />
+
+    <EditText
+        android:id="@+id/et_analysis_answer_item"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="17.5dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="17.5dp"
+        android:background="@drawable/bg_f8f8f8_corners_2"
+        android:gravity="start"
+        android:hint="请输入正确答案"
+        android:lineSpacingExtra="2dp"
+        android:maxLength="10000"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="30dp"
+        android:textColor="@color/color_666666"
+        android:textColorHint="@color/color_DCDCDC"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_analysis_title_item" />
+
+    <TextView
+        android:id="@+id/tv_answer_content_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="7dp"
+        android:text="0/10000"
+        android:textColor="@color/color999999"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_analysis_answer_item"
+        app:layout_constraintEnd_toEndOf="@+id/et_analysis_answer_item" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_answer_img_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_analysis_answer_item"
+        app:layout_constraintStart_toStartOf="@+id/et_analysis_answer_item"
+        app:layout_constraintTop_toBottomOf="@+id/et_analysis_answer_item" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_answer_fill_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="et_analysis_answer_item,tv_answer_content_count,rv_answer_img_item" />
+
+    <com.phjt.view.roundView.RoundLinearLayout
+        android:id="@+id/ll_answer_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17.5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="17.5dp"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_analysis_title_item"
+        app:rv_backgroundColor="@color/color_F8F8F8"
+        app:rv_cornerRadius="2dp">
+
+        <TextView
+            android:id="@+id/tv_analysis_answer_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:lineSpacingExtra="2dp"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp"
+            tools:text="林志玲就将工作重心放在内地和香港。在这期间还有担任颁奖典礼嘉宾" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_answer_img_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.phjt.view.roundView.RoundLinearLayout>
+
+    <TextView
+        android:id="@+id/tv_teacher_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="老师评语"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/ll_answer_show"
+        app:layout_constraintTop_toBottomOf="@+id/ll_answer_show" />
+
+    <TextView
+        android:id="@+id/tv_teacher_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17.5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17.5dp"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_teacher_comment"
+        tools:text="老师努力批阅中..." />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_answer_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="ll_answer_show,tv_teacher_comment,tv_teacher_comment_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

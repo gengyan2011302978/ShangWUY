@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_10"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/bg_ffffff_corners_5"
+    android:paddingTop="18dp">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_tutor"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="5dp" />
+
+    <TextView
+        android:id="@+id/tv_tutor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:textColor="@color/color_404040"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_tutor"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="余秋雨" />
+
+    <TextView
+        android:id="@+id/tv_teacher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/string_teacher"
+        android:textColor="@color/color_404040"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tv_tutor_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_teacher_name">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rl_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="15dp" />
+
+            <com.phjt.shangxueyuan.widgets.FlowLayout
+                android:id="@+id/fl_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="8dp"
+                android:maxHeight="100dp"
+                android:minHeight="10dp"
+                android:visibility="gone"
+                app:layout_goneMarginEnd="12dp" />
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <TextView
+        android:id="@+id/tv_payment"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1.5"
+        android:background="@drawable/bg_select_tutor"
+        android:gravity="center"
+        android:paddingStart="13.5dp"
+        android:paddingEnd="13.5dp"
+        android:maxLines="1"
+        android:textColor="@color/color_white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_tutor"
+        app:layout_constraintStart_toEndOf="@+id/iv_tutor"
+        tools:text="支付金币20000元" />
+
+
+    <com.ctetin.expandabletextviewlibrary.ExpandableTextView
+        android:id="@+id/tv_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:lineSpacingExtra="2dp"
+        android:textColor="@color/color_FF5F605E"
+        android:textSize="13sp"
+        app:ep_max_line="3"
+        app:ep_need_always_showright="true"
+        app:ep_need_contract="true"
+        app:ep_need_expand="true"
+
+        app:ep_expand_color="@color/color_FF999999"
+        app:ep_contract_color="@color/color_FF999999"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_tutor"
+        tools:text="金融学教研室主任，2016年哈尔滨工程大学访学,国金融学教研室主任，2016年哈尔滨工程大学访学" />
+
+    <View
+        android:id="@+id/view_white"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/color_F4F5F7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_introduce" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/btn_back" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="70dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="58dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/iv_logo_login" />
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_mobile_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+        <RelativeLayout
+            android:id="@+id/rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include">
+
+            <ImageView
+                android:id="@+id/iv_agreement"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:padding="4dp"
+                android:src="@drawable/chose_multiple" />
+
+            <TextView
+                android:id="@+id/tv_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iv_agreement"
+                android:text="勾选即代表同意熵吾优"
+                android:textColor="@color/color666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_terms_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_box"
+                android:text="@string/terms_and_privacy_policy"
+                android:textColor="@color/color4171FC"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_terms_policy"
+                android:text="和"
+                android:textColor="@color/color666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_term"
+                android:text="@string/terms_and_privacy"
+                android:textColor="@color/color4171FC"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/shape_bg_register"
+            android:gravity="center"
+            android:minHeight="45dp"
+            android:text="登录/注册"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="19dp"
+            android:padding="@dimen/dp_12"
+            android:text="@string/register"
+            android:textColor="#ff666666"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/tv_login"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="19dp"
+            android:padding="@dimen/dp_12"
+            android:text="@string/forgot_password"
+            android:textColor="#ff666666"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_login"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+
+        <View
+            android:id="@+id/view2"
+            style="@style/UnderLine_0_35"
+            layout="@layout/under_line"
+            android:layout_width="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/colorEEEEEE"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_login_methods"
+            app:layout_constraintEnd_toStartOf="@+id/tv_login_methods"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_login_methods"
+            tools:ignore="IncludeLayoutParam" />
+
+        <TextView
+            android:id="@+id/tv_login_methods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="59dp"
+            android:minHeight="23dp"
+            android:text="@string/other_login_methods"
+            android:textColor="#ff666666"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+        <View
+            android:id="@+id/view"
+            style="@style/UnderLine_0_35"
+            android:layout_width="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:background="@color/colorEEEEEE"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_login_methods"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_login_methods"
+            app:layout_constraintTop_toTopOf="@+id/tv_login_methods"
+            tools:ignore="IncludeLayoutParam" />
+
+        <LinearLayout
+            android:id="@+id/ll_login_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login_methods">
+
+            <TextView
+                android:id="@+id/iv_planet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_planet_logo"
+                android:drawablePadding="8.5dp"
+                android:gravity="center"
+                android:text="生态宇宙登录"
+                android:textColor="@color/color_666666"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/iv_wechat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_wechat_logo"
+                android:drawablePadding="8.5dp"
+                android:gravity="center"
+                android:text="微信登录"
+                android:textColor="@color/color_666666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/iv_by_mobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_pwd_logo"
+                android:drawablePadding="8.5dp"
+                android:gravity="center"
+                android:text="密码登录"
+                android:textColor="@color/color_666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

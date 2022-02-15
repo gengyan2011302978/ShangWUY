@@ -1,0 +1,196 @@
+<resources>
+    <string name="my_app_name">熵吾优</string>
+
+    <!--升级-->
+    <string name="up_grade_mes">立即升级</string>
+    <string name="up_grade_re_mes">重新下载</string>
+    <string name="up_grade_downloaded">&#160;%d %%</string>
+    <string name="downloading">下载中</string>
+    <string name="download_completed">下载完成</string>
+    <string name="install">正在安装</string>
+    <string name="download_error">下载失败,请重新尝试</string>
+
+    <!--意见反馈-->
+    <string name="hint_feedback_edit">请输入您的反馈内容</string>
+    <string name="hint_reply_journal">请输入您的评论</string>
+    <string name="hint_feedback_picture">添加图片（选填，最多三张）</string>
+    <string name="btn_feedback_submit">提交反馈</string>
+
+
+    <string name="sand_save_shot_success">保存图片到相册成功</string>
+    <string name="sand_save_shot_fail">保存图片到相册失败</string>
+
+    <string name="str_app_share_cancel">分享取消</string>
+    <string name="str_app_share_success">分享成功</string>
+    <string name="tips_mobile">请输入手机号</string>
+    <string name="tips_mobile_error">手机号格式不正确</string>
+    <string name="tips_new_password">请输入密码</string>
+    <string name="tips_new_password_confirm">请再次输入密码</string>
+    <string name="tips_password_form">请输入6~20位字母数字集合</string>
+    <string name="tips_password_new">请再次输入6~20位字母数字集合</string>
+    <string name="tips_password_not_same">两次密码输入不一致</string>
+    <string name="tips_mobile_registered">该手机号已注册</string>
+    <string name="mobile">手机号</string>
+    <string name="password">密码</string>
+    <string name="tips_password">请输入6~20位密码</string>
+    <string name="tips_password_reg">请输入6~20位字母数字集合</string>
+    <string name="tips_password_error">手机号或密码不正确</string>
+    <string name="login">登录</string>
+    <string name="out_login">退出登录</string>
+    <string name="register">注册</string>
+    <string name="forgot_password">忘记密码？</string>
+    <string name="other_login_methods">其它登录方式</string>
+    <string name="tips_identify_code">请输入6位验证码</string>
+    <string name="tips_identify_code_hint">请输入6位验证码</string>
+    <string name="tips_identify_code_error">验证码输入不正确</string>
+    <string name="tips_identify_code_lost">验证码已失效</string>
+    <string name="identify_code">验证码</string>
+    <string name="get_identify_code">获取验证码</string>
+    <string name="select_and_agree">用户勾选即代表同意</string>
+    <string name="tips_select_and_agree">请勾选用户协议</string>
+    <string name="terms_and_privacy_policy">《用户使用条款》</string>
+    <string name="terms_and_privacy">《隐私政策》</string>
+    <string name="new_password">新密码</string>
+    <string name="new_password_confirm">再次输入</string>
+    <string name="new_password_hint">请输入6~20位字母数字集合</string>
+    <string name="submit_confirm">确认</string>
+    <string name="go_next">下一步</string>
+    <string name="go_to_pay">立即支付</string>
+    <string name="pay_vip_tip">*商品购买成功后，不可退款</string>
+    <string name="pay_wechat_pay">微信支付</string>
+    <string name="pay_alipay">支付宝支付</string>
+    <string name="pay_method">支付方式</string>
+    <string name="tips_register_success">注册成功</string>
+    <string name="quit_sure">确定</string>
+    <string name="quit_cancel">取消</string>
+    <string name="quit_delete">删除</string>
+    <string name="no_data">空空如也～</string>
+    <string name="is_delete_diary">\n是否删除该日记吗？\n</string>
+    <string name="myorder_fail_str">支付失败</string>
+    <string name="myorder_fail_hintstr">支付失败，请重新支付</string>
+    <string name="order_exitpay_cancelStr">确认离开</string>
+    <string name="order_exitpay_sure">去支付</string>
+    <string name="order_exitpay_okStr">继续支付</string>
+    <string name="order_exitpay_repayStr">重新支付</string>
+    <string name="mine_warm_remindertr">1.如果您是财富挖掘机用户，可申请此认证\n2.权益：享受熵吾优VIP终身卡会员权益，免费畅学全场精彩课程\n3.更多问题，请联系普华智库客服：173-1619-5821</string>
+    <string name="puhua_wechat">Puhua-BOC</string>
+    <string name="puhua_mailbox">yanjianjun@peogoo.com</string>
+    <string name="boc_elementary">初级课程</string>
+    <string name="boc_middle_ranking">中级课程</string>
+    <string name="boc_high_ranking">高级课程</string>
+    <string name="boc_ranking">\u3000\u3000\u3000\u3000\u3000\u3000\u3000</string>
+    <string name="boc_elementary_content">\u3000\u3000\u3000\u3000\u3000\u3000\u3000是考取BOC初级证书的必学内容，包含10个课程体系，是对考试体系9大模块基础实操的课程指导，也是毕业生和职场小白高薪就业的王牌保障。</string>
+    <string name="boc_middle_ranking_content">\u3000\u3000\u3000\u3000\u3000\u3000\u3000考取BOC中级证书的必学内容，包含13个课程体系，是助力中、高级管理型人才实操落地的强化训练，考试通过后可以跳级直升至企业CEO。</string>
+    <string name="boc_high_ranking_content">\u3000\u3000\u3000\u3000\u3000\u3000\u3000考取BOC中级证书的必学内容，包含13个课程体系，是助力中、高级管理型人才实操落地的强化训练，考试通过后可以跳级直升至企业CEO。</string>
+    <string name="rule_password">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
+    <string name="boc_agreement">\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000 《用户使用条款》</string>
+    <string name="welcoming_content">您确认并知悉，自您完成注册/升级并点击同意之后，视为您同意基于本app运营方及app上载内容发布方提供的网络信息服务即与app运营方及app上载内容发布方之间成为特定信息服务伙伴关系。app运营方及app上载内容发布方与您之间的权利义务根据您在app上使用内容及app使用规范确定，双方法律关系主体确定，内容具体且明确。如包括您在内的app的用户在该等权利义务之外拟建立委托、合作、投资或其他法律关系，需要与相关主体另行磋商并签署相应合作协议。在该等合作关系形成前，app运营方及上载内容发布方与包括您在内的app的用户间不存在非特定、无指向性的任何权利义务关系。</string>
+    <string name="agreement_content">您的信息仅用于为您提供服务，熵吾优会坚决保障您的隐私信息安全。\n如果您仍不同意本隐私协议，很遗憾我们将无法继续为您提供服务。</string>
+    <string name="share_info">即日起：\n下载注册BOC商科证书指定学习、考证平台——熵吾优app,即刻免费获得6套价值1880元的翟山鹰老师精品课程！\n 《商业必修九大模块》《中国思维看金融》《商业模式思维》《数字经济财富商机》《法人治理构建》《金融创富思维》</string>
+    <string name="mine_recharge">充值 > </string>
+    <string name="mine_task">&#160;&#160;&#160;|</string>
+    <string name="mine_task_mum">\u3000\u3000\u3000\u3000\ &#160;&#160;%s </string>
+    <string name="mine_task_sign_up">%s个学员报名</string>
+    <string name="mine_task_number">%s个任务数</string>
+
+    <string name="simpleTitle">崩溃信息展示</string>
+    <string name="simpleCopyText">拷贝文本</string>
+    <string name="simpleShareText">分享文本</string>
+    <string name="simpleShareImage">分享长图</string>
+    <string name="simpleCrashInfo">崩溃信息: </string>
+    <string name="simpleClassName">类名: </string>
+    <string name="simpleFunName">方法: </string>
+    <string name="simpleLineNum">行数: </string>
+    <string name="simpleExceptionType">类型: </string>
+    <string name="simpleTime">时间: </string>
+    <string name="simpleModel">设备名称: </string>
+    <string name="simpleBrand">设备厂商: </string>
+    <string name="simpleVersion">系统版本: </string>
+    <string name="simpleCpuAbi">CPU-ABI: </string>
+    <string name="simpleAllInfo">全部信息: </string>
+    <string name="simplePermissionSd">请授予SD卡权限才能分享图片</string>
+    <string name="simpleShare">分享</string>
+    <string name="simpleNoSdCard">未插入sd卡</string>
+    <string name="simpleImageNotExist">图片文件不存在</string>
+    <string name="simpleShareTo">分享到: </string>
+    <string name="simpleCopied">拷贝成功</string>
+    <string name="simpl_boc">BOC证书考试系统\n 登录确认</string>
+
+    <string name="wallet">我的钱包</string>
+    <string name="bank_card">银行卡</string>
+    <string name="wallet_withdrawal_amount">可提现金额</string>
+    <string name="wallet_apply_withdrawal">申请提现</string>
+    <string name="wallet_withdrawal_rule">提现规则</string>
+    <string name="withdrawal_amount_lowest">每次最低</string>
+    <string name="withdrawal_amount">可提现金额：</string>
+    <string name="binding_bank_card">绑定银行卡</string>
+    <string name="withdrawal_detail">记录详情</string>
+    <string name="binding_bank_tip">注意：\n1、您只能绑定一张您的银行卡，银行卡信息可以编辑\n2、提现将以您发起提现时使用的银行卡信息为准</string>
+    <string name="mine_favourable">参与最新优惠活动\n实时更新尊享资讯</string>
+
+    <string name="boc_primary_des">从企业运营整体角度切入，让学习者初步了解九大体系的运营概况及团队搭建情况，循序渐进传递企业运营核心理念。在系统概念的强力支撑下，逐步引导学习者清楚了解影响企业发展的关键要素，并建立起与之对应的个人定位。是学习者面对就业、创业问题的王牌保障。</string>
+    <string name="boc_middle_des">在企业运营体系化的认知基础上，从企业管理的细节模块入手，以区别于纯知识的大量实践案例多维度深入剖析，让学习者从实践角度了解企业管理全貌，知悉行业发展动态，掌控企业发展实质。助力学习者的职业生涯快速成长，以最短的时间晋升企业管理层或企业高管。</string>
+    <string name="boc_high_des">高级课程将与各行业“高精尖”专家合作研究企业项目，深挖“数字化、专业化、标准化、自动化”四化内涵，实质性帮助学习者锻炼成“商业模式、战略运营、资本管理、财务模型、系统控制、价值管理”的高级企业管理人才，并且高级课程考试合格还将获得创业资金。</string>
+    <string name="tips">满%s可用</string>
+
+    <string name="business_together_to_enjoy_title">商学聚享</string>
+    <string name="information_operation_officer_title">信息化运营官</string>
+    <string name="new_marketing_architect_title">新营销架构师</string>
+
+    <string name="punch_the_clock">打卡</string>
+    <string name="exercise_the_clock">作业本</string>
+    <string name="training_camp">训练营</string>
+    <string name="look">查看</string>
+    <string name="free">免费</string>
+    <string name="comment">评论</string>
+    <string name="write_comment">写评论</string>
+    <string name="training_camp_catalog">训练营目录</string>
+    <string name="course_catalog">课程目录</string>
+    <string name="save_qrcode">保存二维码</string>
+    <string name="reply_all">所有回复</string>
+    <string name="cou_name">关联课程：%s</string>
+
+    <string name="exercise_submit">提交作业</string>
+    <string name="exercise_back_to_list">返回列表</string>
+    <string name="exercise_update">修改作业</string>
+    <string name="exercise_back">返回</string>
+    <string name="exercise_explain">您已成功提交身份认证，工作人员会在\n 3个工作日内进行审核</string>
+    <string name="mine_explain">您即将跳转离开本app进入第三方软件或网络页面，您自跳转后进行的任何注册或/和登录操作包括登录后或以游客身份实现的所展示链接的包括但不仅限于个人信息搜集、手机功能权限授权、广告推广营销、商品或服务交易等全部行为均与本app无关。因网络状况、通讯线路、计算机及通信终端自身原因、第三方软件或网络页面自身原因而导致您不能正常使用相关服务或出现财产损失等问题，本app亦不承担任何法律责任，请您知悉。特别提示您注意个人信息保护及财产安全，合理评估，谨慎操作。</string>
+
+
+    <!--解惑-->
+    <string name="string_questions_answers">问答</string>
+    <string name="questions_answers_screen">筛选</string>
+    <string name="questions_open_column">开通专栏</string>
+    <string name="question_tutor_answer">导师答疑</string>
+    <string name="question_selected_answer">精选解答</string>
+    <string name="question_ask_questions">咨询答疑</string>
+    <string name="question_ask">咨询</string>
+    <string name="question_my_consultation">我的咨询</string>
+    <string name="question_my_answer">我的提问</string>
+    <string name="question_select_interest">选择您感兴趣的领域</string>
+    <string name="string_teacher">老师</string>
+    <string name="question_pay_hint">%s学豆提问</string>
+    <string name="question_hint">%s学豆</string>
+    <string name="questions_answers_respondent">%s老师/ 回复于</string>
+    <string name="questions_answers_collection">收藏</string>
+    <string name="mine_view_problems">查看问题</string>
+    <string name="questions_answers_questioner">提问者：%s &#160;/</string>
+    <string name="questions_answers_reply_and">回复于：%s</string>
+    <string name="questions_answers_title">标题最多输入50个汉字</string>
+    <string name="questions_answers_content">对问题补充说明，可以更快获得解答，最多输入500个汉字</string>
+    <string name="questions_answers_public">公开</string>
+    <string name="questions_answers_privacy_settings">隐私设置</string>
+    <string name="questions_answers_professional_field">专业领域</string>
+    <string name="questions_answers_choice">请选择</string>
+    <string name="questions_ask_questions">提问</string>
+    <string name="questions_answers_issue_issue">发布</string>
+    <string name="str_tips">提问将支付%s学豆</string>
+    <string name="str_direct_invitation">直属邀请</string>
+    <string name="str_subordinate_agents">下级代理商</string>
+
+    <string name="currency_recharge_tip">1、1学豆等于1元人民币\n2、学豆仅能在熵吾优APP内使用\n3、请根据您需要购买的商品、服务内容合理充值学豆</string>
+
+    <string name="string_cancel">取消</string>
+    <string name="string_submit">完成</string>
+</resources>

@@ -1,0 +1,11 @@
+<html>
+<script type="text/javascript" src="./qrcode.min.js"></script>
+
+<div id="qrcode" style="width:80px; height:80px;margin:0 0 0 0"></div>
+<script type="text/javascript">
+            var code = new QRCode(document.getElementById("qrcode"), { width:45,height:45 });
+        code.makeCode(window.Android.getString());
+</script>
+
+
+<html>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/cl_shared_images"
+    android:layout_height="531.5dp"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="23.5dp"
+        android:layout_height="23.5dp"
+        android:src="@drawable/close_dialog"
+        app:layout_constraintEnd_toEndOf="@+id/cl_enerating_shared_images"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_enerating_shared_images"
+        android:layout_width="242dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cancel">
+
+        <com.phjt.view.roundImg.RoundedImageView
+            android:id="@+id/iv_enerating_shared_images"
+            android:layout_width="242dp"
+            android:layout_height="430dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="4dp"
+            tools:src="@drawable/bg_intermediate_course" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_people_it"
+            android:layout_width="@dimen/dp_212"
+            android:layout_height="@dimen/dp_105"
+            android:layout_marginTop="@dimen/dp_252"
+            android:background="@drawable/dialog_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.phjt.view.roundImg.RoundedImageView
+                android:id="@+id/iv_re_head_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_8"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_oval="true"
+                app:srcCompat="@drawable/iv_mine_avatar" />
+
+            <TextView
+                android:id="@+id/tv_audition_title_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="6.8dp"
+                android:layout_marginEnd="14dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_333333"
+                android:textSize="13sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="冷血" />
+
+            <TextView
+                android:id="@+id/tv_study_people_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="14dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_999999"
+                android:textSize="8sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_audition_title_item"
+                tools:text="在【在打卡测试】完成打卡" />
+
+            <TextView
+                android:id="@+id/tv_text_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37.5dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="14dp"
+                android:text="累计打卡"
+                android:textColor="@color/color_333333"
+                android:textSize="7.5sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_re_head_pic" />
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="41dp"
+                android:layout_marginTop="0.1dp"
+                android:layout_marginEnd="14dp"
+                android:textColor="@color/color_333333"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text_day"
+                tools:text="3天" />
+
+            <TextView
+                android:id="@+id/tv_text_more_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="33.5dp"
+                android:text="行动力超过"
+                android:textColor="@color/color_333333"
+                android:textSize="7.5sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_re_head_pic" />
+
+            <TextView
+                android:id="@+id/tv_more_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.1dp"
+                android:layout_marginEnd="3dp"
+                android:textColor="@color/color_333333"
+                android:textSize="23sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_more_action_s"
+                app:layout_constraintTop_toBottomOf="@+id/tv_text_more_action"
+                tools:text="100%" />
+
+            <TextView
+                android:id="@+id/tv_more_action_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.1dp"
+                android:layout_marginEnd="9dp"
+                android:text="的成员"
+                android:textColor="@color/color_333333"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_more_action"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_qr_code"
+            android:layout_width="@dimen/dp_212"
+            android:layout_height="@dimen/dp_57"
+            android:layout_marginTop="5.5dp"
+            android:background="@drawable/dialog_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_people_it">
+
+            <com.phjt.view.roundImg.RoundedImageView
+                android:id="@+id/iv_qr_code"
+                android:layout_width="44.5dp"
+                android:layout_height="44.5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_8"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_about" />
+
+            <TextView
+                android:id="@+id/tv_app_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="69.5dp"
+                android:layout_marginTop="6.8dp"
+                android:layout_marginEnd="14dp"
+                android:text="@string/my_app_name"
+                android:textColor="@color/color_666666"
+                android:textSize="10sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_study_peop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="74.5dp"
+                android:layout_marginTop="7.5dp"
+                android:layout_marginEnd="14dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="长按识别二维码"
+                android:textColor="@color/color_999999"
+                android:textSize="8sp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_app_name" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="1dp"
+                android:src="@drawable/ic_left_back"
+                app:layout_constraintEnd_toStartOf="@+id/tv_study_peop"
+                app:layout_constraintTop_toBottomOf="@+id/tv_app_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="@dimen/dp_242"
+        android:layout_height="@dimen/dp_40"
+        android:src="@drawable/ic_generating_shared_images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

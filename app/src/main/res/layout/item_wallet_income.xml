@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="7dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_income_amount_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="¥258.25" />
+
+    <TextView
+        android:id="@+id/tv_income_date_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/color_999999"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_income_amount_item"
+        app:layout_constraintTop_toBottomOf="@+id/tv_income_amount_item"
+        tools:text="2020-05-18 15:22" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/color999999"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_income_phone_item"
+        tools:text="来源：137****9556" />
+    <TextView
+        android:id="@+id/tv_income_phone_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="137****9556" />
+
+    <TextView
+        android:id="@+id/tv_income_vip_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6.5dp"
+        android:layout_marginEnd="9.5dp"
+        android:textColor="@color/color999999"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_income_phone_item"
+        tools:text="开通VIP年卡" />
+</androidx.constraintlayout.widget.ConstraintLayout>

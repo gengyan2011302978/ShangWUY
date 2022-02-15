@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/color030303"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/btn_back" />
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="70dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="58dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/iv_logo_login" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="56dp"
+            android:text="@string/mobile"
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/include"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+        <EditText
+            android:id="@+id/et_mobile"
+            style="@style/EditText"
+            android:layout_marginStart="30dp"
+            android:hint="@string/tips_mobile"
+            android:inputType="phone"
+            android:maxLength="11"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_mobile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_mobile"
+            app:layout_constraintTop_toTopOf="@+id/tv_mobile"
+            tools:ignore="Autofill" />
+
+        <include
+            android:id="@+id/include"
+            style="@style/UnderLine_0_35"
+            layout="@layout/under_line"
+            android:layout_marginTop="@dimen/dp_9"
+            app:layout_constraintTop_toBottomOf="@+id/et_mobile"
+            tools:ignore="IncludeLayoutParam" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="@string/password"
+            android:textColor="#ff666666"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_mobile"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/EditText"
+            android:hint="@string/tips_password"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_password"
+            app:layout_constraintEnd_toEndOf="@+id/et_mobile"
+            app:layout_constraintStart_toStartOf="@+id/et_mobile"
+            app:layout_constraintTop_toTopOf="@+id/tv_password" />
+
+        <include
+            android:id="@+id/include2"
+            style="@style/UnderLine_0_35"
+            layout="@layout/under_line"
+            android:layout_marginTop="@dimen/dp_9"
+            app:layout_constraintTop_toBottomOf="@+id/et_password"
+            tools:ignore="IncludeLayoutParam" />
+
+        <RelativeLayout
+            android:id="@+id/rl_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2">
+
+            <ImageView
+                android:id="@+id/iv_agreement"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:padding="4dp"
+                android:src="@drawable/chose_multiple" />
+
+            <TextView
+                android:id="@+id/tv_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iv_agreement"
+                android:text="勾选即代表同意熵吾优"
+                android:textColor="@color/color666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_terms_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_box"
+                android:text="@string/terms_and_privacy_policy"
+                android:textColor="@color/color4171FC"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_term"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_terms_policy"
+                android:text="和"
+                android:textColor="@color/color666666"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tv_term"
+                android:text="@string/terms_and_privacy"
+                android:textColor="@color/color4171FC"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/shape_bg_register"
+            android:gravity="center"
+            android:minHeight="45dp"
+            android:text="@string/login"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rl_agreement" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="19dp"
+            android:padding="@dimen/dp_12"
+            android:text="@string/register"
+            android:textColor="#ff666666"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/tv_login"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="19dp"
+            android:padding="@dimen/dp_12"
+            android:text="@string/forgot_password"
+            android:textColor="#ff666666"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_login"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+        <TextView
+            android:id="@+id/tv_login_methods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="59dp"
+            android:minHeight="23dp"
+            android:text="@string/other_login_methods"
+            android:textColor="#ff666666"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+
+        <View
+            android:id="@+id/view1"
+            style="@style/UnderLine_0_35"
+            android:layout_width="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/colorEEEEEE"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_login_methods"
+            app:layout_constraintEnd_toStartOf="@+id/tv_login_methods"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_login_methods"
+            tools:ignore="IncludeLayoutParam" />
+
+        <View
+            android:id="@+id/view"
+            style="@style/UnderLine_0_35"
+            android:layout_width="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="25dp"
+            android:background="@color/colorEEEEEE"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_login_methods"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_login_methods"
+            app:layout_constraintTop_toTopOf="@+id/tv_login_methods"
+            tools:ignore="IncludeLayoutParam" />
+
+        <TextView
+            android:id="@+id/iv_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginTop="30dp"
+            android:drawableTop="@drawable/ic_wechat_logo"
+            android:drawablePadding="8.5dp"
+            android:gravity="center"
+            android:text="微信登录"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_logo"
+            app:layout_constraintTop_toBottomOf="@+id/tv_login_methods" />
+
+        <ImageView
+            android:id="@+id/iv_by_mobile"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_wechat"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo"
+            app:layout_constraintTop_toTopOf="@+id/iv_wechat"
+            app:srcCompat="@drawable/ic_verification_code_logo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

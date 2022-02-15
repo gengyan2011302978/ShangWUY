@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:background="@drawable/shape_mall_top_bg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_mall_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/back_white"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/iv_mall_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商城"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_mall_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_mall_back" />
+
+        <TextView
+            android:id="@+id/tv_exchange_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="6dp"
+            android:text="兑换规则"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_mall_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_mall_title" />
+
+        <com.phjt.view.roundImg.RoundedImageView
+            android:id="@+id/iv_mall_head"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="19dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iv_mine_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_mall_back"
+            app:riv_oval="true" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13.5dp"
+            android:layout_marginTop="2.5dp"
+            android:text="15287321374"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_mall_head"
+            app:layout_constraintTop_toTopOf="@+id/iv_mall_head" />
+
+        <TextView
+            android:id="@+id/tv_currency_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tv_nickname"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nickname"
+            tools:text="29345457" />
+
+        <TextView
+            android:id="@+id/tv_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学豆"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_currency_count"
+            app:layout_constraintTop_toBottomOf="@+id/tv_currency_count" />
+
+        <View
+            android:id="@+id/mall_line1"
+            android:layout_width="0.5dp"
+            android:layout_height="25.5dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="44dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/iv_mall_head"
+            app:layout_constraintTop_toTopOf="@+id/iv_mall_head" />
+
+        <TextView
+            android:id="@+id/tv_bocc_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/mall_line1"
+            app:layout_constraintTop_toTopOf="@+id/tv_currency_count"
+            tools:text="29345456" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOCC"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_bocc_count"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bocc_count" />
+
+        <com.phjt.view.roundView.RoundTextView
+            android:id="@+id/tv_exchange_record"
+            android:layout_width="76dp"
+            android:layout_height="29dp"
+            android:gravity="center"
+            android:paddingStart="2dp"
+            android:text="兑换记录"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_mall_head"
+            app:rv_backgroundColor="@color/color_FE6E32"
+            app:rv_cornerRadius_BL="70dp"
+            app:rv_cornerRadius_TL="70dp"
+            app:rv_strokeColor="@color/white"
+            app:rv_strokeWidth="0.5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.phjt.view.roundView.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="195.5dp"
+        android:orientation="vertical"
+        app:rv_backgroundColor="@color/white"
+        app:rv_cornerRadius_TL="19dp"
+        app:rv_cornerRadius_TR="19dp">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/stl_mall"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="8dp"
+            app:tl_indicator_color="@color/color_FF650C"
+            app:tl_indicator_height="3dp"
+            app:tl_indicator_width="56dp"
+            app:tl_tab_space_equal="true"
+            app:tl_textBold="BOTH"
+            app:tl_textSelectColor="@color/color_333333"
+            app:tl_textUnselectColor="@color/color_999999"
+            app:tl_textsize="15sp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_mall"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </com.phjt.view.roundView.RoundLinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

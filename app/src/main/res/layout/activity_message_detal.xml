@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relat_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/rl_main"
+        layout="@layout/layout_title_common" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_main"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginTop="14.5dp"
+        tools:text="您的提问被回答"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginTop="15dp"
+        tools:text="2020-01-13 15:22"
+        android:textColor="#ff999999"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginLeft="15.5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15.5dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/colorEEEEEE" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/image"
+        android:layout_marginLeft="14.5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="15.5dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_message_commont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textColor="#ff666666"
+                android:textSize="15sp"
+                tools:text="日前，京东重磅推出人工智能写作项目“莎士比亚”系统。据悉，该系统在借鉴传统NLG和语言模型方法的基础上，基于京东集团自身在商品于京东集团自身在商品标签和库层面积累的大数据。" />
+
+            <TextView
+                android:id="@+id/tv_url"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tv_message_commont"
+                android:layout_margin="23dp"
+                android:background="@drawable/bg_2076ff_rectangle"
+                android:gravity="center"
+                android:text="链接查看"
+                android:visibility="gone"
+                android:textColor="#ffffffff"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

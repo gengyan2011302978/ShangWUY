@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_re_head_pic"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"
+        app:srcCompat="@drawable/iv_mine_avatar" />
+
+    <TextView
+        android:id="@+id/tv_recyclear_phone_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20.5dp"
+        android:layout_toEndOf="@+id/iv_re_head_pic"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        tools:text="王晓飞" />
+
+    <TextView
+        android:id="@+id/tv_day_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="23.5dp"
+        android:layout_toEndOf="@+id/tv_recyclear_phone_num"
+        android:singleLine="true"
+        android:textColor="@color/color_ACACAC"
+        android:textSize="12sp"
+        tools:text="已坚持2天" />
+
+    <TextView
+        android:id="@+id/tv_recyclear_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="15dp"
+        android:text="..."
+        android:textColor="@color/color_666666"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/view_show"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp" />
+
+    <com.ctetin.expandabletextviewlibrary.ExpandableTextView
+        android:id="@+id/tv_recyclear_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_recyclear_phone_num"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
+        android:layout_toEndOf="@+id/iv_re_head_pic"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp"
+        app:ep_need_always_showright="true"
+        app:ep_need_contract="true"
+        app:ep_need_expand="true"
+        tools:text="金融原来是这个样子的呀？可能我之前学的都不叫金融，听了翟老师的课程才恍然大悟是的发生的发是的发生的。" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/iv_re_head_pic"
+        android:layout_marginEnd="14dp"
+        android:layout_below="@+id/tv_recyclear_content"/>
+    <TextView
+        android:id="@+id/tv_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv_img"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
+        android:layout_toEndOf="@+id/iv_re_head_pic"
+        android:textColor="@color/color_4071FC"
+        android:textSize="15sp"
+        tools:text="#数字经济课程打卡测试" />
+
+    <TextView
+        android:id="@+id/tv_recyclear_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_course"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@+id/iv_re_head_pic"
+        android:textColor="@color/color_999999"
+        android:textSize="13sp"
+        tools:text="2020-09-01 13:00" />
+
+    <TextView
+        android:id="@+id/tv_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_course"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/tv_recyclear_time"
+        android:padding="@dimen/dp_5"
+        android:text="回复"
+        android:textColor="@color/color_2675FE"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_recyclear_like_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_course"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="15dp"
+        android:drawableStart="@drawable/ic_like_un"
+        android:drawablePadding="@dimen/dp_3"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/color_666666"
+        android:textSize="16sp"
+        tools:text="190+" />
+
+    <RelativeLayout
+        android:id="@+id/rl_more_commentsy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_recyclear_time"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_toEndOf="@+id/iv_re_head_pic"
+        android:background="@drawable/drawable_f8f8f8">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_see_more_commentsy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_reply"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:padding="@dimen/dp_5"
+            android:visibility="gone"
+            android:text="查看更多评论"
+            android:textColor="@color/color_2675FE"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/rl_more_commentsy"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="15dp"
+        android:background="@color/color_FAF7F8" />
+</RelativeLayout>

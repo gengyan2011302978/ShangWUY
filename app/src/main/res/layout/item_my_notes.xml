@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.phjt.view.roundImg.RoundedImageView
+        android:id="@+id/iv_re_head_pic"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_oval="true"
+        app:srcCompat="@drawable/iv_mine_avatar" />
+
+    <TextView
+        android:id="@+id/tv_designation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15.5dp"
+        android:layout_marginTop="27dp"
+        android:layout_toEndOf="@+id/iv_re_head_pic"
+        android:singleLine="true"
+        android:textColor="@color/color_333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/iv_re_head_pic"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="190****1013" />
+
+    <ImageView
+        android:id="@+id/iv_vip_item"
+        android:layout_width="23dp"
+        android:layout_height="12.5dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_vip"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_designation"
+        app:layout_constraintStart_toEndOf="@+id/tv_designation"
+        app:layout_constraintTop_toTopOf="@+id/tv_designation" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:singleLine="true"
+        android:textColor="@color/color_999999"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_re_head_pic"
+        tools:text="2020.12.12" />
+
+    <TextView
+        android:id="@+id/tv_editor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:drawablePadding="10dp"
+        android:singleLine="true"
+        android:text="编辑"
+        android:textColor="@color/color_999999"
+        android:textSize="13sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_my_notes_conceal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:textColor="@color/color_333333"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_editor"
+        tools:text="【私密】" />
+
+    <com.ctetin.expandabletextviewlibrary.ExpandableTextView
+        android:id="@+id/tv_my_notes_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"
+        app:ep_need_always_showright="true"
+        app:ep_need_contract="true"
+        app:ep_need_expand="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_editor"
+        tools:text="金融原来是这个样子的呀？可能我之前学的都不叫金融，听了翟老师的课程才恍然大悟是的发生的发是的发生的发大法师打发点的发送..." />
+
+    <!--  点击事件view1-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_click_content"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textColor="@color/transparent"-->
+    <!--        android:textSize="14sp"-->
+    <!--        -->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_editor"-->
+    <!--        tools:text="金融原来是这个样子的呀？可能我之前学的都不叫金融，听了翟老师的课程才恍然大悟是的发生的发是的发生的发大法师打发点的发送..." />-->
+
+    <!--    &lt;!&ndash;  点击事件view2&ndash;&gt;-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_click_content_line"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:maxLines="4"-->
+    <!--        android:textColor="@color/transparent"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/tv_editor"-->
+    <!--        tools:text="" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcy_released"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_notes_content"
+        app:spanCount="3" />
+
+    <TextView
+        android:id="@+id/tv_my_notes_address"
+        android:layout_width="225dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/color_FFF7F7F7"
+        android:drawableStart="@drawable/ic_clock"
+        android:drawableEnd="@drawable/ic_still_more"
+        android:drawablePadding="@dimen/dp_5"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="@dimen/dp_8"
+        android:textColor="@color/color_999999"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcy_released"
+        tools:text="于 这就是金融的秘密大幅度顺丰到付德...." />
+
+    <TextView
+        android:id="@+id/tv_my_notes_up_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:text="该课程已下架"
+        android:textColor="@color/color_1374FF"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/tv_auditing"
+        app:layout_constraintTop_toBottomOf="@+id/rcy_released" />
+
+    <TextView
+        android:id="@+id/tv_auditing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcy_released" />
+
+    <include
+        layout="@layout/zan_comment_share_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_notes_address" />
+
+    <View
+        android:id="@+id/gray_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#66FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

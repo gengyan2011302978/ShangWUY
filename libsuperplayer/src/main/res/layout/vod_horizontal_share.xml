@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="182dp"
+    android:layout_height="match_parent"
+    android:background="@color/super_vod_vtt_bg">
+
+    <TextView
+        android:id="@+id/tv_share_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:text="分享到"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+
+    <ImageView
+        android:id="@+id/iv_wechat"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_below="@+id/tv_share_title"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@+id/tv_share_title"
+        android:src="@drawable/ic_wechat" />
+
+    <TextView
+        android:id="@+id/tv_wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_wechat"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:text="微信好友"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_wechat_circle"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignTop="@+id/iv_wechat"
+        android:layout_toRightOf="@+id/tv_share_title"
+        android:src="@drawable/ic_wechat_circle" />
+
+    <TextView
+        android:id="@+id/tv_wechat_circle"
+        android:layout_width="42dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_wechat_circle"
+        android:layout_alignLeft="@+id/iv_wechat_circle"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="朋友圈"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_study"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_empty_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="86dp"
+            android:layout_height="66.5dp"
+            android:layout_marginTop="@dimen/dp_15"
+            android:src="@drawable/no_data_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12.5dp"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:text="暂无学习"
+            android:textColor="@color/color_999999"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

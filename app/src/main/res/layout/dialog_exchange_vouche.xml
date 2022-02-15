@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:id="@+id/tv_exchange_vouche_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="使用说明"
+        android:textColor="@color/color_FF333333"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_exchange_vouche_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17.5dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="17.5dp"
+        android:gravity="left"
+        android:textColor="@color/color_FF666666"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_vouche_title"
+        tools:text="并建立起与之对应的个人定位。是学习者面对就业、创业问题的王牌保障。并建立起与之对应的个人定位。是学习者面对就业、创业问题的王牌保障。并建立起与之对应的个人定位。是学习者面对就业、创业问题的王牌保障。并建立起与之对应的个人定位。是学习者面对就业、创业问题的王牌保障。" />
+
+    <TextView
+        android:id="@+id/tv_to_use"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25.5dp"
+        android:background="@drawable/bg_to_use"
+        android:gravity="center"
+        android:text="去使用"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_exchange_vouche_content" />
+</androidx.constraintlayout.widget.ConstraintLayout>

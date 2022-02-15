@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rv_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:clickable="true">
+
+    <!-- index6-->
+    <ImageView
+        android:id="@+id/iv_bottom_six_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="42.5dp"
+        android:layout_marginBottom="57dp"
+        android:background="@drawable/ic_bottom_mall"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_bottom_six_elite"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/ic_home_work_mall"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/iv_i_know"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="242dp"
+        android:background="@drawable/ic_i_know" />
+
+</RelativeLayout>

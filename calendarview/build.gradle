@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode 367
+        versionName "3.6.7"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+    task intoJar(type: Copy) {
+        delete 'build/libs/CalendarView.jar'
+        from('build/intermediates/bundles/release/')
+        into('build/libs/')
+        include('classes.jar')
+        rename ('classes.jar', 'CalendarView.jar')
+    }
+    intoJar.dependsOn(build)
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation rootProject.ext.dependencies["appcompat"]
+    //noinspection GradleDependency
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    testImplementation rootProject.ext.dependencies["junit"]
+}
+
+uploadArchives { //Android Studio gradle 支持maven插件，所以可以添加此task
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            repository(url: 'http://127.0.0.1:8081/repository/maven-releases/') {
+                authentication(userName: 'admin', password: 'gy`123456')
+            }
+            pom.project {
+                version '1.0.0' //版本名称
+                artifactId 'calendarview'
+                groupId 'com.phjt.shangwuyou'
+                packaging 'aar' //填写aar
+                description 'update version 1.0.0 add new method' //更新描述
+            }
+        }
+    }
+}

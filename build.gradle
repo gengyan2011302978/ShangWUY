@@ -1,0 +1,70 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url "https://repo1.maven.org/maven2/" }
+        maven { url 'http://maven.zmengzhu.com:46081/repository/mz-android-hosted/' }
+        maven { url 'http://maven.zmengzhu.com:46081/repository/maven-snapshots/' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url 'http://4thline.org/m2' }
+        maven { url "https://jitpack.io" }
+        //maven { url 'http://10.20.39.68:8081/repository/maven-releases/' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.1'
+        //aspectj
+        classpath 'org.aspectj:aspectjtools:1.9.2'
+        classpath 'org.aspectj:aspectjweaver:1.8.8'
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
+        //classpath 'com.phjt.plugin:uploadplugin:1.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        maven { url "https://repo1.maven.org/maven2/" }
+        maven { url 'http://maven.zmengzhu.com:46081/repository/mz-android-hosted/' }
+        maven { url 'http://maven.zmengzhu.com:46081/repository/maven-snapshots/' }
+        maven { url "https://jitpack.io" }
+        maven { url "http://10.1.1.21:8081/repository/Android-maven/" }
+        maven { url "http://10.20.39.62:8081/repository/maven-releases/" }
+        maven { url 'http://4thline.org/m2' }
+
+        flatDir {
+            dirs 'libs'
+            dirs project(':app').file('libs')
+        }
+    }
+}
+
+ext {
+    compileSdkVersion = 28
+    buildToolsVersion = "25.0.2"
+    supportSdkVersion = "25.4.0"
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    versionCode = 1
+    versionName = "v1.0"
+    proguard = true
+    rootPrj = "$projectDir/.."
+    ndkAbi = "armeabi-v7a"//, "armeabi-v7a", "arm64-v8a"
+    sdkType = "liteavsdk"
+    noffmpeg = false
+    noijkplay = false
+    useASAN = true
+    aekit_version = '1.0.20-cloud'
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

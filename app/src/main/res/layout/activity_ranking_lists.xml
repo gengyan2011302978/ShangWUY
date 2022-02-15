@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <include layout="@layout/layout_title_common" />
+
+    <TextView
+        android:id="@+id/tv_ranking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="@dimen/dp_44"
+        android:text="排名"
+        android:textColor="@color/color_FF333333"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_44"
+        android:text="用户名"
+        android:textColor="@color/color_FF333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_44"
+        android:layout_marginEnd="34dp"
+        android:text="BOCC数量"
+        android:textColor="@color/color_FF333333"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_ranking_list"
+        android:layout_width="match_parent"
+        android:layout_marginTop="70dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ranking_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_my_number"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/icon_learnrank_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/tv_my_number"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="我的排行"
+            android:textColor="@color/color_FF999999"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_number_item"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6.5dp"
+            android:gravity="center"
+            android:textColor="@color/color_FF666666"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_my_number"
+            tools:text="NO.1000" />
+
+        <com.phjt.view.roundImg.RoundedImageView
+            android:id="@+id/iv_head"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="14.5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tv_number_item"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_oval="true"
+            app:src="@drawable/iv_mine_avatar"
+            app:srcCompat="@drawable/iv_mine_avatar" />
+
+        <TextView
+            android:id="@+id/tv_nickName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:maxEms="6"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/color_FF666666"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/credit_item"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+            app:layout_constraintStart_toEndOf="@+id/iv_head"
+            app:layout_constraintTop_toTopOf="@+id/iv_head"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="啦啦啦啦啦啦啦啦啦啦的粉色闪电" />
+
+
+        <TextView
+            android:id="@+id/tv_credit_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="34dp"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_FF666666"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_head"
+            tools:text="1000" />
+
+        <TextView
+            android:id="@+id/credit_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学豆："
+            android:textColor="@color/color_999999"
+            android:textSize="13sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_head"
+            app:layout_constraintEnd_toStartOf="@+id/tv_credit_item"
+            app:layout_constraintTop_toTopOf="@+id/iv_head" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
